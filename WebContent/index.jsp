@@ -145,10 +145,17 @@
 	<div class="lsnav">
 		<div class="nav-inside">
 			<div class="nav-list l">
-				<strong><a href="http://www.lashou.com/mall/">团购商城</a></strong> <strong><a
+				<strong><a href="goods.do">团购商城</a></strong>
+				<c:forEach items="${gtList}" var="goodstype">
+					<strong><a href="goods.do?typeid=${goodstype.id}">${goodstype.typename}</a></strong> 
+				</c:forEach>
+			
+			
+			
+				<!-- <strong><a href="http://www.lashou.com/mall/">团购商城</a></strong> <strong><a
 					href="http://beijing.lashou.com" class="cur">今日团购<span>(254)</span></a></strong>
-				<strong><a href="http://beijing.lashou.com/life_list/">乐怡家居<!--<span>(344)</span>--></a></strong>
-				<strong><a href="http://beijing.lashou.com/items">限时特卖<!--<span>(4736)</span>--></a></strong>
+				<strong><a href="http://beijing.lashou.com/life_list/">乐怡家居<span>(344)</span></a></strong>
+				<strong><a href="http://beijing.lashou.com/items">限时特卖<span>(4736)</span></a></strong>
 
 				<strong> <a href="/cate/dianyingktv">影音娱乐</a>
 				</strong> <strong> <a href="/cate/zizhu">美食饕餮</a>
@@ -162,10 +169,10 @@
 						<li><a href="http://www.lashou.com/hotel/">酒店团购</a></li>
 						<li><a href="http://www.lashou.com/reserve/">酒店预订<em
 								class="news_small"></em></a></li>
-						<!--li><a href="http://www.lashou.com/room">今晚团酒店</a></li-->
-						<!--li><a href="http://www.lashou.com/tcard.php">拉手商旅卡</a></li-->
+						li><a href="http://www.lashou.com/room">今晚团酒店</a></li
+						li><a href="http://www.lashou.com/tcard.php">拉手商旅卡</a></li
 					</ul>
-				</strong>
+				</strong> -->
 
 
 
@@ -185,7 +192,7 @@
 					</ul></span> 
 					<c:choose>  
 					   <c:when test="${name!=null}">
-					   		欢迎${name}
+					   		欢迎${name}<a href="login.do">退出</a>
 					   </c:when>  
 					   <c:otherwise>  
 					   		<span><a href="login.jsp">登录</a></span> <span><a href="regist.jsp">注册</a></span>
@@ -253,14 +260,14 @@
 	</table>
 	<table align="center">
 		<tr>
-			<td><a href="goods.do?currpage=0">首页</a>&nbsp;&nbsp;</td>
+			<td><a href="goods.do?currpage=0&typeid=${typeid }">首页</a>&nbsp;&nbsp;</td>
 			<td><c:if test="${currpage>0}">
-					<a href="goods.do?currpage=${currpage-1}&pageSize=${pageSize}">上一页</a> &nbsp;&nbsp;
+					<a href="goods.do?currpage=${currpage-1}&pageSize=${pageSize}&typeid=${typeid }">上一页</a> &nbsp;&nbsp;
 	</c:if></td>
 			<td><c:if test="${currpage<last}">
-					<a href="goods.do?currpage=${currpage+1}&pageSize=${pageSize}">下一页</a>&nbsp;&nbsp;
+					<a href="goods.do?currpage=${currpage+1}&pageSize=${pageSize}&typeid=${typeid }">下一页</a>&nbsp;&nbsp;
 	</c:if></td>
-			<td><a href="goods.do?currpage=${last}&pageSize=${last}">末页</a></td>
+			<td><a href="goods.do?currpage=${last}&pageSize=${last}&typeid=${typeid }">末页</a></td>
 		</tr>
 	</table>
 

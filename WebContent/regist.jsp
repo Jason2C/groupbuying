@@ -176,43 +176,65 @@ rel=nofollow,noindex><B>帮助</B><EM></EM></A>
 <DIV class="e-sms nsbg c r">
 <FORM id=searchform onsubmit="javacript:return checksubmit()" method=get 
 action=/search.php><INPUT id=headersearchform class="e-sms-l l" title=商品、商家、商圈 
-name=sw> <INPUT value=2422 type=hidden name=cityid> <INPUT id=searchsubmit class="e-sms-r l" type=submit> </FORM></DIV></DIV></DIV><!--nav start:-->
-<DIV class=lsnav>
-<DIV class=nav-inside>
-<DIV class="nav-list l"><STRONG><!-- <A 
-href="http://www.lashou.com/mall/">拉手商城</A></STRONG> <STRONG><A 
-href="http://guangzhou.lashou.com/">今日团购<SPAN>(9783)</SPAN></A></STRONG> 
-<STRONG><A href="http://guangzhou.lashou.com/life_list/">生活<span>(753)</span></A></STRONG> 
-<STRONG><A href="http://guangzhou.lashou.com/items">限时特卖<span>(8644)</span></A></STRONG> 
-<STRONG><A href="http://www.lashou.com/cate/dianyingktv">电影KTV</A> 
-</STRONG><STRONG><A href="http://www.lashou.com/cate/zizhu">自助餐</A> 
-</STRONG><STRONG><A href="http://www.lashou.com/house/">团房</A> </STRONG><STRONG 
-id=n_hotel class=nav-hotel><A class=sub 
-href="http://www.lashou.com/travel/">酒店旅游<EM></EM></A> 
-<UL style="WIDTH: 120px; DISPLAY: none; _right: 0px" class=n-h-list>
-  <LI><A href="http://www.lashou.com/travel/">旅游团购</A> </LI>
-  <LI><A href="http://www.lashou.com/travel/out_travel.php">出境游</A> </LI>
-  <LI><A href="http://www.lashou.com/hotel/">酒店团购</A> </LI>
-  <LI><A href="http://www.lashou.com/reserve/">酒店预订<EM 
-  class=news_small></EM></A> --> <!--li><a href="http://www.lashou.com/room">今晚团酒店</a></li--><!--li><a href="http://www.lashou.com/tcard.php">拉手商旅卡</a></li--></LI></UL><!--[if IE 6]>
+name=sw> <INPUT value=2422 type=hidden name=cityid> <INPUT id=searchsubmit class="e-sms-r l" type=submit> </FORM></DIV></DIV></DIV>
+<!--nav start:-->
+<div class="lsnav">
+	<div class="nav-inside">
+		<div class="nav-list l">
+						<strong><a href="http://www.lashou.com/mall/">拉手商城</a></strong>
+			 <strong><a href="http://guangzhou.lashou.com">今日团购<span>(9783)</span></a></strong>
+			 <strong><a href="http://guangzhou.lashou.com/life_list/">生活<!--<span>(753)</span>--></a></strong>
+			 <strong><a href="http://guangzhou.lashou.com/items">限时特卖<!--<span>(8644)</span>--></a></strong>
+			 			    <strong>
+				<a href="/cate/dianyingktv">电影KTV</a>
+				</strong>
+			 			 				<strong>
+				<a href="/cate/zizhu">自助餐</a>
+				</strong>
+			 			 <strong>
+				<a href="http://www.lashou.com/house/">团房</a>
+			</strong>
+			
+			<strong id="n_hotel" class="nav-hotel">
+				<a href="http://www.lashou.com/travel/" class="sub">酒店旅游<em></em></a>
+				<ul class="n-h-list" style="width: 120px; display: none;">
+					<li><a href="http://www.lashou.com/travel/">旅游团购</a></li>
+					<li><a href="http://www.lashou.com/travel/out_travel.php">出境游</a></li>
+					<li><a href="http://www.lashou.com/hotel/">酒店团购</a></li>
+					<li><a href="http://www.lashou.com/reserve/">酒店预订<em class="news_small"></em></a></li>
+					<!--li><a href="http://www.lashou.com/room">今晚团酒店</a></li-->
+					<!--li><a href="http://www.lashou.com/tcard.php">拉手商旅卡</a></li-->
+				</ul>
+				<!--[if IE 6]>
 				<iframe id="hotel_select" style="filter:alpha(opacity=0); position:absolute; height:60px; top:150px; left:-1px; width:117px; display:none;"></iframe>
-				<![endif]--></STRONG><STRONG>
-<DIV 
-style="Z-INDEX: 10; POSITION: absolute; WIDTH: 20px; BACKGROUND-POSITION: -53px -135px; HEIGHT: 19px; TOP: -11px; RIGHT: 5px" 
-class=fpng></DIV><!-- <A href="http://cp.lashou.com/" target=_blank>彩票</A> 
-</STRONG></DIV>
-<DIV class="nav-login r"><SPAN id=n_ml class=nav-my><A class=sub 
-href="http://www.lashou.com/mycode.php">我的拉手<EM></EM></A> --> 
-<UL style="DISPLAY: none" class=n-h-list>
-  <LI><A href="http://www.lashou.com/mycode.php">我的拉手券</A> </LI>
-  <LI><A href="http://www.lashou.com/mygo.php">我的订单</A> </LI>
-  <LI><A href="http://www.lashou.com/mycollection.php">我的收藏</A> </LI>
-  <LI><A href="http://www.lashou.com/deliver_address.php">常用地址</A> </LI>
-  <LI><A href="http://www.lashou.com/bills.php">拉手账本</A> </LI>
-  <LI><A href="http://www.lashou.com/settings.php">账户设置</A> </LI>
-  <LI><A href="http://www.lashou.com/message.php">我的消息</A> 
-</LI></UL></SPAN><SPAN><!-- <A href="http://www.lashou.com/login.php">登录</A></SPAN> 
-<SPAN><A class=cur href="http://www.lashou.com/regn.php">注册</A> --></SPAN> <!--
+				<![endif]-->
+			</strong>
+
+									<strong>
+				<div class="fpng" style=" position:absolute;right:5px;top:-11px;z-index:10; width:20px; height:19px; background-position:-53px -135px;"></div>
+				<a href="http://cp.lashou.com/" target="_blank">彩票</a>
+			</strong>
+			
+			
+				</div>
+		 <div class="nav-login r">
+								
+                   <span id="n_ml" class="nav-my">
+						<a class="sub" href="http://www.lashou.com/mycode.php">我的拉手<em></em></a>
+						<ul class="n-h-list" style="display:none">
+							<li><a href="http://www.lashou.com/mycode.php">我的拉手券</a></li>
+							<li><a href="http://www.lashou.com/mygo.php">我的订单</a></li>
+							<li><a href="http://www.lashou.com/mycollection.php">我的收藏</a></li>
+							<li><a href="http://www.lashou.com/deliver_address.php">常用地址</a></li>
+							<li><a href="http://www.lashou.com/bills.php">拉手账本</a></li>
+							<li><a href="http://www.lashou.com/settings.php">账户设置</a></li>
+							<li><a href="http://www.lashou.com/message.php">我的消息</a></li>
+						</ul>
+					</span>
+					<span><a class="cur" href="login.jsp">登录</a></span>
+					<span><a href="regist.jsp">注册</a></span>
+
+		   <!--
 				  <span class="nav-name"></span>
 				  <span class="nav-x"></span>
                    <span id="n_ml" class="nav-my">
@@ -228,7 +250,10 @@ href="http://www.lashou.com/mycode.php">我的拉手<EM></EM></A> -->
 						</ul>
 					</span>
 				<span><a href="http://www.lashou.com/logout.php">退出</a></span>
-		   --></DIV></DIV></DIV><!--nav end-->
+		   -->				</div>
+	</div>
+</div>
+<!--nav end-->
 <STYLE>.reg_ok {
 	LINE-HEIGHT: 28px; PADDING-LEFT: 25px; DISPLAY: inline-block; BACKGROUND: url(http://s2.lashouimg.com/static/pics/myls/icons-signup.png) no-repeat; HEIGHT: 28px
 }

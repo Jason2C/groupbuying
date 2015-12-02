@@ -15,6 +15,11 @@ public class GoodsDao extends BaseDao {
 
 	}
 
+	public List<Goods> findByTypePage(int typeid, int page, int pageSize) {
+		String sql = "select * from t_goods where type = ? limit ?,? ";
+		return findSome(sql, typeid, page * pageSize, pageSize);
+	}
+
 	public int countAll() {
 
 		try {

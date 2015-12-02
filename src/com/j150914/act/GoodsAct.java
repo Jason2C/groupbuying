@@ -7,28 +7,31 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.j150914.controller.IAction;
 import com.j150914.dao.GoodsDao;
+import com.j150914.dao.GoodsTypeDao;
 import com.j150914.pojo.Goods;
+import com.j150914.pojo.GoodsType;
 
 public class GoodsAct implements IAction {
 	private int currpage = 0;
 	private int pageSize = 15;
 	private int gid;
 	private GoodsDao goodsDao = new GoodsDao();
-	private Goods goods;
-
-	public Goods getGoods() {
-		return goods;
-	}
-
-	public void setGoods(Goods goods) {
-		this.goods = goods;
-	}
+	private Goods goods = new Goods();
+	private GoodsTypeDao typeDao = new GoodsTypeDao();
+	private int typeid;
 
 	@Override
 	public String execute(HttpServletRequest request,
 			HttpServletResponse response) {
-		List<Goods> goodList = goodsDao.findByPage(currpage, pageSize);
-		// List<Bookinfo> bookList = bookinfoDao.findAll();
+		List<GoodsType> gtList = typeDao.findAll();
+		request.setAttribute("gtList", gtList);
+		List<Goods> goodList;
+		request.setAttribute("typeid", typeid);
+		if (typeid == 0 || "".equals(typeid) || "undefined".equals(typeid)) {
+			goodList = goodsDao.findByPage(currpage, pageSize);
+		} else {
+			goodList = goodsDao.findByTypePage(typeid, currpage, pageSize);
+		}
 		request.setAttribute("goodList", goodList);
 		request.setAttribute("currpage", currpage);
 		request.setAttribute("pageSize", pageSize);
@@ -40,6 +43,13 @@ public class GoodsAct implements IAction {
 		}
 		request.setAttribute("last", last);
 		return "index.jsp";
+	}
+
+	public String findType(HttpServletRequest request,
+			HttpServletResponse response) {
+
+		goods = (Goods) goodsDao.findById(gid);
+		return "showOne.jsp";
 	}
 
 	public String showOne(HttpServletRequest request,
@@ -72,4 +82,19 @@ public class GoodsAct implements IAction {
 		this.gid = gid;
 	}
 
+	public Goods getGoods() {
+		return goods;
+	}
+
+	public void setGoods(Goods goods) {
+		this.goods = goods;
+	}
+
+	public int getTypeid() {
+		return typeid;
+	}
+
+	public void setTypeid(int typeid) {
+		this.typeid = typeid;
+	}
 }
