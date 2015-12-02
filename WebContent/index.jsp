@@ -215,7 +215,7 @@
 					<div class="con-pic">
 						<a href="<c:choose>  
 								   <c:when test="${name!=null}">
-								   		goods~showOne.do?gid${good.id}
+								   		goods~showOne.do?gid=${good.id}
 								   </c:when>  
 								   <c:otherwise>  
 								   		login.jsp  
@@ -264,7 +264,7 @@
 			<td><c:if test="${currpage>0}">
 					<a href="goods.do?currpage=${currpage-1}&pageSize=${pageSize}&typeid=${typeid }">上一页</a> &nbsp;&nbsp;
 	</c:if></td>
-			<td><c:if test="${currpage<last}">
+			<td><c:if test="${currpage<last-1}">
 					<a href="goods.do?currpage=${currpage+1}&pageSize=${pageSize}&typeid=${typeid }">下一页</a>&nbsp;&nbsp;
 	</c:if></td>
 			<td><a href="goods.do?currpage=${last}&pageSize=${last}&typeid=${typeid }">末页</a></td>

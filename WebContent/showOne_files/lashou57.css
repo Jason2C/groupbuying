@@ -203,7 +203,7 @@ LI.fx-collection A:hover {
 	BACKGROUND-POSITION: -384px -255px
 }
 .c-buy-num {
-	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; WIDTH: 190px; PADDING-RIGHT: 0px; DISPLAY: block; FONT-FAMILY: Arial; LETTER-SPACING: -2px; COLOR: #fff; FONT-SIZE: 37px; FONT-WEIGHT: bold; PADDING-TOP: 16px; text-shadow: 1px 1px 1px #4F4F4F
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; PADDING-LEFT: 88px; WIDTH: 190px; PADDING-RIGHT: 0px; DISPLAY: block; FONT-FAMILY: Arial; LETTER-SPACING: -2px; COLOR: #fff; FONT-SIZE: 37px; FONT-WEIGHT: bold; PADDING-TOP: 16px; text-shadow: 1px 1px 1px #4F4F4F
 }
 .c-buy-num SPAN {
 	PADDING-RIGHT: 2px; FONT-SIZE: 25px
@@ -275,7 +275,7 @@ LI.fx-collection A:hover {
 	FONT-STYLE: normal
 }
 LI.cm-success {
-	TEXT-ALIGN: left; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: bold 14px/28px Arial; PADDING-TOP: 10px
+	TEXT-ALIGN: left; PADDING-BOTTOM: 0px; PADDING-LEFT: 17px; PADDING-RIGHT: 0px; FONT: bold 14px/28px Arial; PADDING-TOP: 10px
 }
 .cm-success SPAN {
 	PADDING-LEFT: 5px; WIDTH: 27px; DISPLAY: inline-block; BACKGROUND-POSITION: -672px -367px; HEIGHT: 28px; VERTICAL-ALIGN: middle

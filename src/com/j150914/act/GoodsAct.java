@@ -1,6 +1,8 @@
 package com.j150914.act;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -26,16 +28,20 @@ public class GoodsAct implements IAction {
 		List<GoodsType> gtList = typeDao.findAll();
 		request.setAttribute("gtList", gtList);
 		List<Goods> goodList;
+		int last = 0;
 		request.setAttribute("typeid", typeid);
 		if (typeid == 0 || "".equals(typeid) || "undefined".equals(typeid)) {
 			goodList = goodsDao.findByPage(currpage, pageSize);
+			last = goodsDao.countAll();
 		} else {
 			goodList = goodsDao.findByTypePage(typeid, currpage, pageSize);
+			last = goodsDao.countType(typeid);
 		}
 		request.setAttribute("goodList", goodList);
+		request.setAttribute("glSize", goodList.size());
 		request.setAttribute("currpage", currpage);
 		request.setAttribute("pageSize", pageSize);
-		int last = goodsDao.countAll();
+		 
 		if (last % pageSize == 0) {
 			last = last / pageSize;
 		} else {
@@ -45,18 +51,22 @@ public class GoodsAct implements IAction {
 		return "index.jsp";
 	}
 
-	public String findType(HttpServletRequest request,
-			HttpServletResponse response) {
-
-		goods = (Goods) goodsDao.findById(gid);
-		return "showOne.jsp";
-	}
-
 	public String showOne(HttpServletRequest request,
 			HttpServletResponse response) {
 		goods = (Goods) goodsDao.findById(gid);
+		request.setAttribute("goods", goods);
 		return "showOne.jsp";
 	}
+	public String addGWC(HttpServletRequest request,
+			HttpServletResponse response) {
+		Map<Integer, Integer> gwc=new HashMap<>();
+		gwc.put(gid, 1);
+
+		return "showOne.jsp";
+	}
+
+	
+	
 
 	public int getCurrpage() {
 		return currpage;

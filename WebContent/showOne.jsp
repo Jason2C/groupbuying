@@ -6,6 +6,7 @@
 			+ path + "/";
 %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %> 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <!-- saved from url=(0047)http://www.lashou.com/travel/detail/859836.html -->
 <HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>广州银行号船票1张 | 酒店旅游 国内旅游设施(温泉等) | 拉手网广州</TITLE>
@@ -159,8 +160,8 @@ style="Z-INDEX: 10; POSITION: absolute; WIDTH: 20px; BACKGROUND-POSITION: -53px 
 class=fpng></DIV><A href="http://cp.lashou.com/" target=_blank>彩票</A> 
 </STRONG></DIV>
 <DIV class="nav-login r"><SPAN class=nav-name 
-title=rz.sino272789>rz.sino272789</SPAN> <SPAN class=nav-x><A 
-href="http://www.lashou.com/grade.php" target=_blank><IMG alt="" 
+title=${name }>用户:${name }</SPAN> <SPAN class=nav-x><A 
+href="javascript:;" target=_blank><IMG alt="" 
 src="showOne_files/ico_jbb.gif" width=16 height=16></A> </SPAN><SPAN id=n_ml 
 class=nav-my><A class=sub 
 href="http://www.lashou.com/mycode.php">我的拉手<EM></EM></A> 
@@ -320,24 +321,24 @@ href="http://www.lashou.com/mycode.php">我的拉手<EM></EM></A>
   <LI class=fx-msn><A id=deal-share-im title=MSN/QQ 
   href="javascript:void(0)"></A></LI>
   <LI class=fx-email><A title=邮件 
-  href="mailto:?body=%B7%A2%CF%D6%D2%BB%BA%C3%CD%F8%D5%BE--%C0%AD%CA%D6%CD%F8%A3%AC%CB%FB%C3%C7%C3%BF%CC%EC%D7%E9%D6%AF%D2%BB%B4%CE%CD%C5%B9%BA%A3%AC%B3%AC%D6%B5%A3%A1%0D%0A%0D%0A++++++++%BD%F1%CC%EC%B5%C4%CD%C5%B9%BA%CA%C7%A3%BA%BD%F6%CA%DB38.8%D4%AA%A3%A1%CA%D0%B3%A1%BC%DB68%D4%AA%B5%C4%C0%B6%BA%A3%EB%E0%D3%CE%B4%AC%B9%AB%CB%BE%A1%BE%B9%E3%D6%DD%D2%F8%D0%D0%BA%C5%A1%BF%D3%CE%B4%AC%B4%AC%C6%B11%D5%C5%A3%A8%B6%FE%C2%A5%BA%C0%BB%AA%CE%F7%CA%BD%B4%F3%CC%FC%D7%F9%CE%BB%A3%AC%B4%AC%C6%B1%D2%D1%BA%AC%B1%A3%CF%D5%A3%A9%A3%BA%D6%E9%BD%AD%D2%B9%D3%CE%A3%A8%CA%B1%B3%A4%D4%BC75%B7%D6%D6%D3%A3%A9%2B%D3%CE%B4%AC%C6%DA%BC%E4%A3%A8%C4%FB%C3%CA%B2%E8%CE%DE%CF%DE%B3%A9%D2%FB%2B%B5%E3%D0%C41%B7%DD%2B%DC%F8%B2%E8%CE%DE%CF%DE%B9%A9%D3%A6%A3%A9%A3%A1%0D%0A%0D%0A++++++++%CE%D2%CF%EB%C4%FA%BB%E1%B8%D0%D0%CB%C8%A4%B5%C4%A3%BA%0D%0A%0D%0A++++++++http%3A%2F%2Fwww.lashou.com%2Ftravel%2Fdetail%2F859836.html%3Fqdh%3D11070&amp;subject=%BF%EC%C0%B4%BA%CD%CE%D2%D2%BB%C6%F0%B2%CE%BC%D3%CD%C5%B9%BA%B0%C9%A3%BA%BD%F6%CA%DB38.8%D4%AA%A3%A1%CA%D0%B3%A1%BC%DB68%D4%AA%B5%C4%C0%B6%BA%A3%EB%E0%D3%CE%B4%AC%B9%AB%CB%BE%A1%BE%B9%E3%D6%DD%D2%F8%D0%D0%BA%C5%A1%BF%D3%CE%B4%AC%B4%AC%C6%B11%D5%C5%A3%A8%B6%FE%C2%A5%BA%C0%BB%AA%CE%F7%CA%BD%B4%F3%CC%FC%D7%F9%CE%BB%A3%AC%B4%AC%C6%B1%D2%D1%BA%AC%B1%A3%CF%D5%A3%A9%A3%BA%D6%E9%BD%AD%D2%B9%D3%CE%A3%A8%CA%B1%B3%A4%D4%BC75%B7%D6%D6%D3%A3%A9%2B%D3%CE%B4%AC%C6%DA%BC%E4%A3%A8%C4%FB%C3%CA%B2%E8%CE%DE%CF%DE%B3%A9%D2%FB%2B%B5%E3%D0%C41%B7%DD%2B%DC%F8%B2%E8%CE%DE%CF%DE%B9%A9%D3%A6%A3%A9%A3%A1"></A></LI>
+  href="javascript:;"></A></LI>
   <LI class=fx-collection><A title=收藏 onclick="my_collect('20912908','859836')" 
   href="javascript:void(0)">收藏</A><SPAN>new</SPAN> </LI></UL>
 <DIV style="DISPLAY: none" id=deal-share-im-c class="c qqmsndown">把下面的内容通过 MSN 或 
 QQ 发送给好友：<BR><INPUT 
 style="BORDER-BOTTOM: #c1c1c1 1px solid; BORDER-LEFT: #c1c1c1 1px solid; PADDING-BOTTOM: 3px; PADDING-LEFT: 3px; WIDTH: 350px; PADDING-RIGHT: 3px; COLOR: #999; FONT-SIZE: 12px; BORDER-TOP: #c1c1c1 1px solid; BORDER-RIGHT: #c1c1c1 1px solid; PADDING-TOP: 3px" 
 id=invite_url onclick=this.select() 
-value="仅售38.8元！市场价68元的蓝海豚游船公司【广州银行号】游船船票1张（二楼豪华西式大厅座位，船票已含保险）：珠江夜游（时长约75分钟）+游船期间（柠檬茶无限畅饮+点心1份+茗茶无限供应）！ http://www.lashou.com/travel/detail/859836.html?qdh=11030" 
+value="${goods.details}" 
 readOnly name=""> </DIV></DIV>
 <DIV class=cont-titbox>
 <DIV class="c_cion con-bg-t"></DIV>
 <DIV class=con-mid>
-<H1><FONT color=#ff0000>广州</FONT>今日团购: 
-仅售38.8元！市场价68元的蓝海豚游船公司【广州银行号】游船船票1张（二楼豪华西式大厅座位，船票已含保险）：珠江夜游（时长约75分钟）+游船期间（柠檬茶无限畅饮+点心1份+茗茶无限供应）！</H1>
+<H1><FONT color=#ff0000></FONT>${goods.name}
+</H1>
 <DIV class=dealinfo>
 <DIV class="deal-l lsm-deal l">
 <DIV class=c-pro-price>
-<DIV class="c_cion c-pro-buy"><SPAN class=c-buy-num><SPAN>¥</SPAN>38.8</SPAN> <A 
+<DIV class="c_cion c-pro-buy"><SPAN class=c-buy-num><SPAN>¥</SPAN>${goods.tuangouprice}</SPAN> <A 
 class="proicon c-buy-btn" href="http://www.lashou.com/buy.php?id=859836">购买</A> 
 </DIV></DIV>
 <DIV class=lsm-deal-fm>
@@ -345,24 +346,33 @@ class="proicon c-buy-btn" href="http://www.lashou.com/buy.php?id=859836">购买<
 width="100%">
   <TBODY>
   <TR>
-    <TD>市场价<SPAN class=val>¥68</SPAN></TD>
-    <TD>折扣<SPAN>5.7折</SPAN></TD>
-    <TD>节省<SPAN>¥29.2</SPAN></TD></TR></TBODY></TABLE></DIV>
+    <TD>市场价<SPAN class=val>¥${goods.price}</SPAN></TD>
+    <TD>折扣<SPAN><fmt:formatNumber value="${goods.tuangouprice/goods.price}" pattern="0.0"/>折</SPAN></TD>
+    <TD>节省<SPAN>¥<fmt:formatNumber value="${goods.price-goods.tuangouprice}" pattern="0.0"/></SPAN></TD></TR></TBODY></TABLE></DIV>
+<script type="text/javascript">
+$(function(){
+	$(".button-red").click(function(){
+		$.ajax({
+			url:'goods~addGWC.do?gid=${goods.id}',
+			success:function(){
+				$('.cm-success').html('<SPAN class=c_cion></SPAN>团购已成功，可继续购买');
+				alert("添加购物车成功!!!");
+			}
+		});
+	});
+	
+});
+</script>
 <UL class=c-pro-mode>
-  <LI class=cm-mun><EM>3956</EM>人已购买 
+  <LI class=cm-mun><EM>${goods.sold}</EM>人已购买 
   <LI style="COLOR: #666">剩余3天以上 </LI>
-  <LI class="cm-success o"><SPAN class=c_cion></SPAN>团购已成功，可继续购买 
-  <LI 
-  style="MARGIN: -3px 0px 12px; COLOR: #666">22点05分达到最低团购人数：<STRONG>5</STRONG>人 
-  </LI>
-  <LI class="cm-refund lsm-refund"><SPAN class=lsm-refund7><A class=c_cion 
-  title="支持 “7天内未消费，无条件退款”" href="http://www.lashou.com/faq.php?act=promise" 
-  target=_blank>支持“7天退款”</A></SPAN> <SPAN class=lsm-refundout><A class=c_cion 
-  title="支持 “过期未消费，一键退款”" href="http://www.lashou.com/faq.php?act=promise" 
-  target=_blank>支持“过期退款”</A></SPAN> </LI></UL></DIV>
+  <LI class="cm-success o"><SPAN class=c_cion></SPAN><a class="button-red" href="javascript:;">添加购物车</a><!-- 团购已成功，可继续购买 --> 
+  <!-- <LI style="MARGIN: -3px 0px 12px; COLOR: #666">22点05分达到最低团购人数：<STRONG>5</STRONG>人 </LI> -->
+  <LI class="cm-refund lsm-refund"><SPAN class=lsm-refund7>
+  <A class=c_cion title="支持 “7天内未消费，无条件退款”" href="http://www.lashou.com/faq.php?act=promise" target=_blank>支持“7天退款”</A></SPAN> 
+  <SPAN class=lsm-refundout><A class=c_cion title="支持 “过期未消费，一键退款”" href="http://www.lashou.com/faq.php?act=promise" target=_blank>支持“过期退款”</A></SPAN> </LI></UL></DIV>
 <DIV class="deal-r r">
-<DIV class=c-pro-image><IMG alt=广州银行号船票1张 
-src="showOne_files/133836752150639000.jpg" width=440 height=280></DIV>
+<DIV class=c-pro-image><IMG alt="" src="showOne_files/133836752150639000.jpg" width=440 height=280></DIV>
 <DIV 
 class=c-pro-text>悠悠珠江水，缱绻柔情对，船游夜珠江，美景媲漓江！认识千年南国红豆，弹奏动情珠水流光，从这里起航！&nbsp;</DIV></DIV>
 <DIV class=c></DIV></DIV></DIV>
@@ -472,8 +482,7 @@ title=景点介绍 href="http://www.lashou.com/travel/detail/859836.html#jdjs">�
 href="http://www.lashou.com/travel/detail/859836.html#jiudjs">商家介绍</A></H2></DIV>
 <P class=size14><STRONG>本单详情：</STRONG></P>
 <P 
-class=indent2em>凭拉手券兑换蓝海豚游船公司【广州银行号】游船船票1张（二楼豪华西式大厅座位，船票已含保险）：珠江夜游（时长约75分钟）+游船期间（柠檬茶无限畅饮+点心1份+茗茶无限供应），市场价68元，现价<STRONG 
-class=yel>38.8</STRONG>元。</P>
+class=indent2em>${goods.details}</P>
 <DIV id=wxts class=new_h2_1>
 <H2><STRONG class=yel>温馨提示</STRONG></H2></DIV>
 <P class=size14><STRONG>本单注意事宜：</STRONG></P>

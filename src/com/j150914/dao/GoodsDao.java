@@ -21,9 +21,21 @@ public class GoodsDao extends BaseDao {
 	}
 
 	public int countAll() {
-
 		try {
 			ResultSet rs = super.query("select count(*) from t_goods");
+			if (rs.next()) {
+				return rs.getInt(1);
+			}
+			super.closeConnection();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return 0;
+	}
+	public int countType(int typeid) {
+		try {
+			ResultSet rs = super.query("select count(*) from t_goods where type = ?",typeid);
 			if (rs.next()) {
 				return rs.getInt(1);
 			}
