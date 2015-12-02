@@ -1,0 +1,333 @@
+.lc_redzi {
+	FONT-FAMILY: Arial; COLOR: #c00; FONT-WEIGHT: bold
+}
+.lc_out {
+	MARGIN: 0px auto; WIDTH: 660px
+}
+.lc_heatab {
+	BORDER-BOTTOM: #d9d9d9 1px solid; BORDER-LEFT: #d9d9d9 1px solid; MARGIN-TOP: 15px; MIN-HEIGHT: 100px; BACKGROUND: #f6f6f6; BORDER-TOP: #d9d9d9 1px solid; BORDER-RIGHT: #d9d9d9 1px solid
+}
+.lc_hhbg {
+	BACKGROUND: url(tj_hbgg.gif) repeat-x; HEIGHT: 36px; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.lc_padd {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 30px; PADDING-TOP: 10px
+}
+.lc_padd A {
+	LINE-HEIGHT: 160%
+}
+.lc_online {
+	BACKGROUND: url(tj_line.gif) no-repeat; HEIGHT: 36px
+}
+.lc_wbkuang {
+	BORDER-BOTTOM: #a7a7a7 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a7a7a7 1px solid; PADDING-BOTTOM: 4px; PADDING-LEFT: 2px; WIDTH: 74px; PADDING-RIGHT: 2px; FONT: bold 18px/1.2 Tahoma,Verdana,'ËÎÌå',STHeiTi,sans-serif; BACKGROUND: #fff; BORDER-TOP: #a7a7a7 1px solid; BORDER-RIGHT: #a7a7a7 1px solid; PADDING-TOP: 4px
+}
+.lc_wbkuang_01 {
+	BORDER-BOTTOM: #a7a7a7 1px solid; BORDER-LEFT: #a7a7a7 1px solid; PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; FONT: 14px/18px Tahoma,Verdana,'ËÎÌå',STHeiTi,sans-serif; BACKGROUND: #fff; VERTICAL-ALIGN: middle; BORDER-TOP: #a7a7a7 1px solid; BORDER-RIGHT: #a7a7a7 1px solid; PADDING-TOP: 4px
+}
+.lc_fontz {
+	FONT-FAMILY: Arial; FONT-SIZE: 18px; FONT-WEIGHT: bold
+}
+.lc_fontz0 {
+	FONT-FAMILY: Arial; COLOR: #c00; FONT-SIZE: 18px; FONT-WEIGHT: bold
+}
+.buynew_ou {
+	TEXT-ALIGN: left; WIDTH: 100%; COLOR: #000; FONT-SIZE: 14px
+}
+.buynew_ou P {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px
+}
+.buynew_ou P .buynew_xz {
+	FONT-WEIGHT: bold
+}
+.lc_botline {
+	BORDER-BOTTOM: #ecebeb 1px solid; BACKGROUND: #fff
+}
+.lc_botline P {
+	LINE-HEIGHT: 180%
+}
+.lc_bnoline {
+	BACKGROUND: #fff
+}
+.lc_fontzi {
+	COLOR: #cc0000; FONT-SIZE: 14px
+}
+.lc_lbb {
+	COLOR: #666; FONT-SIZE: 14px
+}
+.lc_lbb UL LI {
+	MARGIN: 5px 0px; HEIGHT: 35px; CLEAR: both
+}
+.lc_lbb UL LI P {
+	LINE-HEIGHT: 30px
+}
+.lc_lbb UL LI INPUT {
+	TEXT-ALIGN: center; FLOAT: right
+}
+.sub_goods_input {
+	BORDER-BOTTOM: #a7a7a7 1px solid; BORDER-LEFT: #a7a7a7 1px solid; LINE-HEIGHT: 25px; WIDTH: 74px; BACKGROUND: #fff; HEIGHT: 25px; BORDER-TOP: #a7a7a7 1px solid; BORDER-RIGHT: #a7a7a7 1px solid
+}
+.lc_biankuang {
+	BORDER-BOTTOM: #a7a7a7 1px solid; BORDER-LEFT: #a7a7a7 1px solid; LINE-HEIGHT: 25px; BACKGROUND: #fff; HEIGHT: 25px; FONT-SIZE: 14px; BORDER-TOP: #a7a7a7 1px solid; BORDER-RIGHT: #a7a7a7 1px solid
+}
+.lc_zongj {
+	BACKGROUND: #fff; FONT-SIZE: 18px; FONT-WEIGHT: bold
+}
+.lc_zongj EM {
+	FONT-STYLE: normal; FLOAT: left; COLOR: #c00; FONT-SIZE: 14px; FONT-WEIGHT: normal
+}
+.lc_phone {
+	BORDER-BOTTOM: #d9d9d9 1px solid; BORDER-LEFT: #d9d9d9 1px solid; PADDING-BOTTOM: 10px; MARGIN-TOP: 15px; MIN-HEIGHT: 50px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND: #f6f6f6; BORDER-TOP: #d9d9d9 1px solid; BORDER-RIGHT: #d9d9d9 1px solid; PADDING-TOP: 10px
+}
+.lc_phoneco {
+	BORDER-BOTTOM: #d9d9d9 1px solid; BORDER-LEFT: #d9d9d9 1px solid; MARGIN-TOP: 15px; MIN-HEIGHT: 50px; BACKGROUND: #f6f6f6; BORDER-TOP: #d9d9d9 1px solid; BORDER-RIGHT: #d9d9d9 1px solid
+}
+.lc_dbt {
+	FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.lc_dbt INPUT {
+	VERTICAL-ALIGN: middle
+}
+.button_lctj {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; HEIGHT: 27px; COLOR: #fff; FONT-SIZE: 14px; BORDER-LEFT-STYLE: none; FONT-WEIGHT: bold
+}
+.button_lcyz {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; HEIGHT: 27px; COLOR: #fff; FONT-SIZE: 14px; BORDER-LEFT-STYLE: none; FONT-WEIGHT: bold
+}
+.button_lctj {
+	WIDTH: 102px; BACKGROUND: url(lc_tj.gif) no-repeat
+}
+.button_lcyz {
+	WIDTH: 59px; BACKGROUND: url(lc_yz.gif) no-repeat
+}
+.lc_comp {
+	BORDER-BOTTOM: #d9d9d9 1px solid; PADDING-BOTTOM: 10px; LINE-HEIGHT: 30px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 28px; FONT-SIZE: 16px; FONT-WEIGHT: bold; PADDING-TOP: 10px
+}
+.lc_comptt {
+	PADDING-BOTTOM: 10px; LINE-HEIGHT: 30px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 28px; FONT-SIZE: 16px; FONT-WEIGHT: bold; PADDING-TOP: 10px
+}
+.lc_bidan {
+	PADDING-BOTTOM: 4px; MARGIN: 0px auto 15px; MIN-HEIGHT: 50px; PADDING-LEFT: 4px; WIDTH: 600px; PADDING-RIGHT: 4px; BACKGROUND: #f0f0f0; PADDING-TOP: 4px
+}
+.lc_bidnei {
+	BORDER-BOTTOM: #e6e6e6 1px solid; BORDER-LEFT: #e6e6e6 1px solid; PADDING-BOTTOM: 10px; MIN-HEIGHT: 20px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND: #fdfbfb; BORDER-TOP: #e6e6e6 1px solid; BORDER-RIGHT: #e6e6e6 1px solid; PADDING-TOP: 10px
+}
+.lc_bidnei P {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 5px
+}
+.lc_mar {
+	MARGIN-TOP: 10px
+}
+.lc_mar0 {
+	MARGIN-TOP: 5px
+}
+.lc_bigbut {
+	TEXT-ALIGN: right; MARGIN: 10px auto 0px; WIDTH: 665px
+}
+.lc_buttonbig {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; WIDTH: 192px; BORDER-TOP-STYLE: none; BACKGROUND: url(lc_buttont.gif) no-repeat; HEIGHT: 49px; BORDER-LEFT-STYLE: none
+}
+.lc_buttonnext {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; WIDTH: 192px; BORDER-TOP-STYLE: none; BACKGROUND: url(next_btn.png) no-repeat; HEIGHT: 49px; BORDER-LEFT-STYLE: none
+}
+.lc_butt-zhif {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; WIDTH: 191px; BORDER-TOP-STYLE: none; BACKGROUND: url(lc_buttont0.gif) no-repeat; HEIGHT: 47px; BORDER-LEFT-STYLE: none
+}
+.lc_butt-fanh {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; WIDTH: 144px; BORDER-TOP-STYLE: none; BACKGROUND: url(lc_buttont1.gif) no-repeat; HEIGHT: 47px; BORDER-LEFT-STYLE: none
+}
+.lc_zhifu {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND: #fff; PADDING-TOP: 10px
+}
+.lc_zhts {
+	BORDER-BOTTOM: #ffd583 1px solid; BORDER-LEFT: #ffd583 1px solid; PADDING-BOTTOM: 7px; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BACKGROUND: #fffeec; HEIGHT: 25px; FONT-SIZE: 14px; BORDER-TOP: #ffd583 1px solid; FONT-WEIGHT: bold; BORDER-RIGHT: #ffd583 1px solid; PADDING-TOP: 7px
+}
+.lc_dash {
+	BORDER-BOTTOM: #e4e4e4 1px dotted; MIN-HEIGHT: 70px
+}
+.lc_dash UL LI {
+	MARGIN-TOP: 15px; FLOAT: left; MARGIN-LEFT: 20px
+}
+.lc_n_pay UL LI {
+	MARGIN-TOP: 10px; WIDTH: 190px; FLOAT: left; MARGIN-LEFT: 15px
+}
+.lc_n_pay0 {
+	BORDER-BOTTOM: #e4e4e4 1px dotted; PADDING-BOTTOM: 15px
+}
+.lc_n_pay0 UL LI {
+	MARGIN-TOP: 10px; MARGIN-LEFT: 15px
+}
+.lc_n_pay0 UL LI INPUT {
+	VERTICAL-ALIGN: baseline
+}
+.lc_dengout {
+	WIDTH: 680px
+}
+.lc_dengout .lc_dcenter {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND: url(lc_dcenter.png) repeat-y; PADDING-TOP: 0px
+}
+.lc_dengout .lc_dcenter .lcheadd {
+	BORDER-BOTTOM: #fbd686 2px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 30px; PADDING-TOP: 0px
+}
+.lc_dengout .lc_nerong {
+	MARGIN: 5px auto 0px; MIN-HEIGHT: 50px; WIDTH: 630px
+}
+.lc_yellbg {
+	PADDING-BOTTOM: 20px; MIN-HEIGHT: 50px; WIDTH: 315px; BACKGROUND: #fff8df; PADDING-TOP: 15px
+}
+.lc_dengle {
+	WIDTH: 315px; PADDING-TOP: 15px
+}
+.lc_dbiaodan {
+	PADDING-LEFT: 15px; MARGIN-BOTTOM: 5px
+}
+.lc_dbiaodan LABEL {
+	TEXT-ALIGN: right; LINE-HEIGHT: 31px; WIDTH: 60px; FLOAT: left; HEIGHT: 31px; FONT-SIZE: 14px; MARGIN-RIGHT: 10px
+}
+.lc_dkuang {
+	BORDER-BOTTOM: #a9a9a9 1px solid; BORDER-LEFT: #a9a9a9 1px solid; LINE-HEIGHT: 30px; BACKGROUND: #fff; HEIGHT: 29px; FONT-SIZE: 14px; BORDER-TOP: #a9a9a9 1px solid; BORDER-RIGHT: #a9a9a9 1px solid
+}
+.lc_dkwrong {
+	BORDER-BOTTOM: #ef0000 1px solid; BORDER-LEFT: #ef0000 1px solid; LINE-HEIGHT: 30px; BACKGROUND: #ffeded; HEIGHT: 29px; FONT-SIZE: 14px; BORDER-TOP: #ef0000 1px solid; BORDER-RIGHT: #ef0000 1px solid
+}
+.lc_dshur {
+	BORDER-BOTTOM: #ffb500 1px solid; BORDER-LEFT: #ffb500 1px solid; LINE-HEIGHT: 30px; BACKGROUND: #fef5a1; HEIGHT: 29px; FONT-SIZE: 14px; BORDER-TOP: #ffb500 1px solid; BORDER-RIGHT: #ffb500 1px solid
+}
+.tip {
+	COLOR: #999; FONT-SIZE: 12px
+}
+.lc_buttonde {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; WIDTH: 103px; BORDER-TOP-STYLE: none; BACKGROUND: url(lc_tjzc.gif) no-repeat; HEIGHT: 32px; BORDER-LEFT-STYLE: none
+}
+.lc_buttondl {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; WIDTH: 83px; BORDER-TOP-STYLE: none; BACKGROUND: url(lc_denglu.gif) no-repeat; HEIGHT: 32px; BORDER-LEFT-STYLE: none
+}
+.lc_fxx {
+	PADDING-BOTTOM: 0px; MARGIN: 10px auto 0px; MIN-HEIGHT: 20px; PADDING-LEFT: 10px; WIDTH: 305px; PADDING-RIGHT: 0px; BORDER-TOP: #fbd686 1px dotted; PADDING-TOP: 10px
+}
+.lc_fenxiang UL LI {
+	MARGIN-TOP: 4px; FLOAT: left; MARGIN-LEFT: 4px
+}
+.lc_ziti {
+	BORDER-BOTTOM: #d7d7d7 1px solid; BORDER-LEFT: #aaa 1px solid; PADDING-BOTTOM: 10px; LINE-HEIGHT: 28px; OVERFLOW-Y: scroll; PADDING-LEFT: 15px; WIDTH: 540px; PADDING-RIGHT: 15px; HEIGHT: 130px; FONT-SIZE: 14px; BORDER-TOP: #aaa 1px solid; BORDER-RIGHT: #d7d7d7 1px solid; PADDING-TOP: 10px
+}
+.din_mart {
+	MARGIN-TOP: 10px
+}
+.ding_shzi {
+	FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.ding_table {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; MARGIN-TOP: 3px; BORDER-TOP-STYLE: none; BACKGROUND: #f1f0f0; FONT-SIZE: 12px; BORDER-LEFT-STYLE: none
+}
+.ding_write {
+	PADDING-BOTTOM: 5px; LINE-HEIGHT: 20px; MIN-HEIGHT: 25px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BORDER-COLLAPSE: collapse; BACKGROUND: #fff; PADDING-TOP: 5px
+}
+.dingtd_bg {
+	TEXT-ALIGN: center; BACKGROUND: #f6f6f6; FONT-SIZE: 12px
+}
+.ding_miay {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; WIDTH: 92px; BORDER-TOP-STYLE: none; BACKGROUND: url(dingd_button.gif) no-repeat; HEIGHT: 27px; BORDER-LEFT-STYLE: none; CURSOR: pointer
+}
+.ding_pad {
+	PADDING-LEFT: 10px
+}
+.pay_note {
+	PADDING-BOTTOM: 25px; PADDING-LEFT: 40px; PADDING-RIGHT: 0px; PADDING-TOP: 15px
+}
+.pay_note .p_n1 {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 160%; PADDING-LEFT: 37px; PADDING-RIGHT: 0px; COLOR: #333; PADDING-TOP: 0px
+}
+.pay_note H1 {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 35px; PADDING-RIGHT: 30px; FONT-FAMILY: 'ºÚÌå'; BACKGROUND: url(img_note.jpg) no-repeat left 7px; FONT-SIZE: 20px; FONT-WEIGHT: normal; PADDING-TOP: 10px
+}
+.pay_note .pass_done {
+	BORDER-BOTTOM-STYLE: none; LINE-HEIGHT: 37px; BORDER-RIGHT-STYLE: none; WIDTH: 118px; BORDER-TOP-STYLE: none; BACKGROUND: url(gone_bg.jpg) no-repeat; HEIGHT: 37px; COLOR: #fff; FONT-SIZE: 14px; BORDER-LEFT-STYLE: none; CURSOR: pointer; FONT-WEIGHT: bold; MARGIN-RIGHT: 10px
+}
+.pay_note .nopass {
+	BORDER-BOTTOM-STYLE: none; LINE-HEIGHT: 37px; BORDER-RIGHT-STYLE: none; WIDTH: 118px; BORDER-TOP-STYLE: none; BACKGROUND: url(nopass_bg.jpg) no-repeat; HEIGHT: 37px; COLOR: #fff; FONT-SIZE: 14px; BORDER-LEFT-STYLE: none; CURSOR: pointer; FONT-WEIGHT: bold
+}
+.pay_note .p_n2 {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 37px; PADDING-RIGHT: 0px; PADDING-TOP: 15px
+}
+.pay_note .other_pay {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 37px; PADDING-RIGHT: 0px; PADDING-TOP: 5px
+}
+.pay_pricebq {
+	POSITION: relative
+}
+.pay_imgposi {
+	POSITION: absolute
+}
+.lc_payzhifu UL LI {
+	WIDTH: 285px; FLOAT: left; MARGIN-LEFT: 10px
+}
+.lc_payzhifu UL LI IMG {
+	MARGIN-TOP: 10px; MARGIN-LEFT: 5px
+}
+.lc_payzhifu UL LI INPUT {
+	MARGIN-TOP: 25px; FLOAT: left
+}
+.lc_payform UL LI {
+	WIDTH: 145px; DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 10px
+}
+.lc_payform UL LI IMG {
+	MARGIN-TOP: 10px; MARGIN-LEFT: 5px
+}
+.china_gonsha {
+	BACKGROUND-IMAGE: url(bank_all.gif); MARGIN-TOP: 12px; WIDTH: 112px; BACKGROUND-REPEAT: no-repeat; FLOAT: left; HEIGHT: 33px; MARGIN-LEFT: 10px; CURSOR: pointer
+}
+.lc_payform01 {
+	MARGIN-TOP: 15px; BORDER-TOP: #e4e4e4 1px dotted
+}
+.lc_payform01 UL LI {
+	WIDTH: 145px; FLOAT: left; HEIGHT: 90px; MARGIN-LEFT: 10px; _margin-left: 5px
+}
+.china_gonsha01 {
+	BACKGROUND-IMAGE: url(bank_all.gif); MARGIN-TOP: 12px; WIDTH: 112px; BACKGROUND-REPEAT: no-repeat; FLOAT: left; HEIGHT: 40px; MARGIN-LEFT: 10px; CURSOR: pointer
+}
+.lc_payform01 UL LI IMG {
+	MARGIN-TOP: 10px; MARGIN-LEFT: 8px
+}
+.lc_payform01 UL LI INPUT {
+	MARGIN-TOP: 23px; FLOAT: left
+}
+.lc_payform UL LI INPUT {
+	MARGIN-TOP: 20px; FLOAT: left
+}
+.lc_fonlzi {
+	MARGIN-LEFT: 5px; FONT-SIZE: 14px
+}
+.cxrz {
+	WIDTH: 240px
+}
+.cxrz .cxrz_head {
+	WIDTH: 240px; BACKGROUND: url(../cxrz_head.jpg) no-repeat; HEIGHT: 40px
+}
+.cxrz .cxrz_bottom {
+	WIDTH: 240px; BACKGROUND: url(../cxrz_bottom.jpg) no-repeat; HEIGHT: 15px; _width: 241px; _background: url(../cxrz_bottom.jpg) no-repeat 1px 0px
+}
+.cxrz .cxrz_c {
+	BORDER-LEFT: #ff9966 1px solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND: #fff; BORDER-RIGHT: #ff9966 1px solid; PADDING-TOP: 5px
+}
+.cxrz .cxrz_c LI {
+	BORDER-BOTTOM: #e3e3e3 1px dashed; PADDING-BOTTOM: 10px; PADDING-LEFT: 39px; PADDING-RIGHT: 0px; PADDING-TOP: 10px
+}
+.cxrz .cxrz_c LI.cxrz_swb {
+	BACKGROUND: url(../bcp_cion.jpg) no-repeat left center
+}
+.cxrz .cxrz_c LI.cxrz_wx {
+	BACKGROUND: url(../xh_cion.jpg) no-repeat left center
+}
+.cxrz .cxrz_c LI.cxrz_afb {
+	BACKGROUND: url(../zfb_cion.jpg) no-repeat left center
+}
+.cxrz .cxrz_c LI.cxrz_cft {
+	BACKGROUND: url(../cxt_cion.jpg) no-repeat left center
+}
+.cxrz .cxrz_c LI A {
+	COLOR: #555
+}
+.cxrz .cxrz_c LI A:hover {
+	COLOR: #ff6600; TEXT-DECORATION: none
+}
