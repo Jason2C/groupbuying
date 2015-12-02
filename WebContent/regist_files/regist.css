@@ -1,0 +1,51 @@
+#TB_overlay {
+	Z-INDEX: 99999; POSITION: fixed; WIDTH: 100%; HEIGHT: 100%; TOP: 0px; LEFT: 0px
+}
+.TB_overlayBG {
+	FILTER: alpha(opacity=75); BACKGROUND-COLOR: #000; opacity: 0.75; -moz-opacity: 0.75
+}
+* HTML #TB_overlay {
+	POSITION: absolute; ; HEIGHT: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight:document.body.offsetHeight + 'px')
+}
+#TB_window {
+	Z-INDEX: 999999; BORDER-BOTTOM: #525252 4px solid; POSITION: fixed; TEXT-ALIGN: left; BORDER-LEFT: #525252 4px solid; DISPLAY: none; BACKGROUND: #ffffff; COLOR: #000000; BORDER-TOP: #525252 4px solid; TOP: 50%; BORDER-RIGHT: #525252 4px solid; LEFT: 50%
+}
+* HTML #TB_window {
+	POSITION: absolute; ; MARGIN-TOP: expression(0 - parseInt(this.offsetHeight / 2) + (TBWindowMargin = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop) + 'px')
+}
+#TB_title {
+	HEIGHT: 15px
+}
+#TB_ajaxContent {
+	TEXT-ALIGN: left; CLEAR: both; OVERFLOW: auto
+}
+.TB_modal#TB_ajaxContent {
+	PADDING-BOTTOM: 15px; PADDING-LEFT: 15px; PADDING-RIGHT: 15px; PADDING-TOP: 15px
+}
+#TB_load {
+	Z-INDEX: 9999; POSITION: fixed; MARGIN: -6px 0px 0px -104px; WIDTH: 208px; DISPLAY: none; HEIGHT: 13px; TOP: 50%; LEFT: 50%
+}
+* HTML #TB_load {
+	POSITION: absolute; ; MARGIN-TOP: expression(0 - parseInt(this.offsetHeight / 2) + (TBWindowMargin = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop) + 'px')
+}
+#TB_HideSelect {
+	Z-INDEX: 99999; POSITION: fixed; BORDER-BOTTOM-STYLE: none; FILTER: alpha(opacity=0); BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: #fff; WIDTH: 100%; BORDER-TOP-STYLE: none; HEIGHT: 100%; BORDER-LEFT-STYLE: none; TOP: 0px; LEFT: 0px; opacity: 0; -moz-opacity: 0
+}
+* HTML #TB_HideSelect {
+	POSITION: absolute; ; HEIGHT: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight:document.body.offsetHeight + 'px')
+}
+#TB_iframeContent {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; MARGIN-TOP: 1px; BORDER-TOP-STYLE: none; MARGIN-BOTTOM: -1px; CLEAR: both; BORDER-LEFT-STYLE: none; _margin-bottom: 1px
+}
+.reg_ok {
+	LINE-HEIGHT: 28px; PADDING-LEFT: 25px; DISPLAY: inline-block; BACKGROUND: url(http://s2.lashouimg.com/static/pics/myls/icons-signup.png) no-repeat; HEIGHT: 28px
+}
+.reg_no {
+	LINE-HEIGHT: 28px; PADDING-LEFT: 25px; DISPLAY: inline-block; BACKGROUND: url(http://s2.lashouimg.com/static/pics/myls/icons-signup.png) no-repeat; HEIGHT: 28px
+}
+.reg_ok {
+	BACKGROUND-POSITION: 5px 8px; COLOR: #090
+}
+.reg_no {
+	BACKGROUND-POSITION: 5px -42px; COLOR: #c66
+}

@@ -1,0 +1,384 @@
+.new_info {
+	PADDING-BOTTOM: 30px; PADDING-LEFT: 24px; PADDING-RIGHT: 24px; FONT-SIZE: 14px; PADDING-TOP: 1px
+}
+.new_info P {
+	LINE-HEIGHT: 25px; COLOR: #666
+}
+.new_info P IMG {
+	MARGIN-BOTTOM: 10px
+}
+.new_info P.size14 STRONG {
+	COLOR: #333
+}
+.new_info .yel {
+	COLOR: #ff6600
+}
+.indent2em {
+	TEXT-INDENT: 2em
+}
+.size14 {
+	FONT-SIZE: 14px
+}
+.new_h2_1 {
+	POSITION: relative; MARGIN: 20px 0px; WIDTH: 100%; HEIGHT: 40px
+}
+.new_h2_1 H2 {
+	POSITION: absolute; PADDING-BOTTOM: 3px; LINE-HEIGHT: 27px; PADDING-LEFT: 30px; WIDTH: 640px; PADDING-RIGHT: 0px; DISPLAY: block; BACKGROUND: url(../../pics/hotel/hotgroup/titlebj2.gif) no-repeat; HEIGHT: 34px; COLOR: #fff; FONT-SIZE: 12px; TOP: 0px; FONT-WEIGHT: normal; PADDING-TOP: 3px; LEFT: -30px
+}
+.new_h2_1 H2 STRONG {
+	BORDER-BOTTOM: #e53803 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #e53803 1px solid; LINE-HEIGHT: 26px; WIDTH: 78px; DISPLAY: inline-block; BACKGROUND: #fff; HEIGHT: 26px; COLOR: #ff6600; FONT-SIZE: 14px; BORDER-TOP: #e53803 1px solid; MARGIN-RIGHT: 15px; BORDER-RIGHT: #e53803 1px solid
+}
+.new_h2_1 H2 A {
+	COLOR: #fff
+}
+.new_h2_1 H2 A:hover {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+.todyinfo {
+	
+}
+.margin_t_10 {
+	MARGIN-TOP: 10px
+}
+.new_info H2.margin_t_10 {
+	MARGIN: 10px 0px 20px
+}
+.todyinfo .hzp_mid {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 10px
+}
+.unit_left_d02 {
+	WIDTH: 670px; HEIGHT: 320px
+}
+.duo_pic {
+	POSITION: relative; WIDTH: 670px; HEIGHT: 320px; OVERFLOW: hidden
+}
+.package {
+	WIDTH: 670px
+}
+#thumb-view {
+	Z-INDEX: 1000; POSITION: absolute; TEXT-ALIGN: right; PADDING-BOTTOM: 5px; PADDING-LEFT: 0px; WIDTH: 670px; BOTTOM: 0px; PADDING-RIGHT: 0px; BACKGROUND: url(../../pics/hotel/hotgroup/scrollbj.png) repeat-x; HEIGHT: 29px; OVERFLOW: hidden; PADDING-TOP: 5px; LEFT: 0px
+}
+#thumb-view A {
+	BORDER-BOTTOM: #fff 2px solid; BORDER-LEFT: #fff 2px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; WIDTH: 50px; PADDING-RIGHT: 0px; DISPLAY: inline-block; FLOAT: none; HEIGHT: 25px; BORDER-TOP: #fff 2px solid; MARGIN-RIGHT: 5px; BORDER-RIGHT: #fff 2px solid; PADDING-TOP: 0px
+}
+#thumb-view A.hover {
+	BORDER-BOTTOM: #fec921 2px solid; BORDER-LEFT: #fec921 2px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-TOP: #fec921 2px solid; BORDER-RIGHT: #fec921 2px solid; PADDING-TOP: 0px
+}
+#thumb-view A IMG {
+	WIDTH: 50px; DISPLAY: block; HEIGHT: 25px; CURSOR: pointer
+}
+.hoverNav {
+	Z-INDEX: 100; POSITION: absolute; WIDTH: 100%; DISPLAY: none; HEIGHT: 100%; TOP: 0px; LEFT: 0px
+}
+.prevLink {
+	POSITION: absolute; WIDTH: 30%; DISPLAY: block; BACKGROUND: url(blank.gif) no-repeat 0px 0px; HEIGHT: 270px
+}
+.nextLink {
+	POSITION: absolute; WIDTH: 30%; DISPLAY: block; BACKGROUND: url(blank.gif) no-repeat 0px 0px; HEIGHT: 270px
+}
+.prevLink {
+	LEFT: 0px
+}
+.nextLink {
+	RIGHT: 0px
+}
+.prevLink {
+	FILTER: alpha(opacity=60); BACKGROUND: url(../../pics/hotel/hotgroup/gallery-sprites.gif) no-repeat -60px 50%; opacity: 0.6; -moz-opacity: 0.6; -khtml-opacity: 0.6
+}
+.nextLink {
+	FILTER: alpha(opacity=60); BACKGROUND: url(../../pics/hotel/hotgroup/gallery-sprites.gif) no-repeat 145px 50%; opacity: 0.6; -moz-opacity: 0.6; -khtml-opacity: 0.6
+}
+.yel_box {
+	BORDER-BOTTOM: #fec66f 1px solid; BORDER-LEFT: #fec66f 1px solid; PADDING-BOTTOM: 6px; MARGIN: 0px; PADDING-LEFT: 13px; WIDTH: 422px; PADDING-RIGHT: 13px; BACKGROUND: url(../../pics/hotel/hotgroup/yelbj.gif) repeat-x; HEIGHT: 61px; BORDER-TOP: #fec66f 1px solid; BORDER-RIGHT: #fec66f 1px solid; PADDING-TOP: 6px
+}
+.yel_box P {
+	LINE-HEIGHT: 30px; FONT-SIZE: 14px
+}
+.yel_box .r {
+	TEXT-ALIGN: right; MARGIN: 0px
+}
+.trip_pos {
+	Z-INDEX: 1000; POSITION: relative
+}
+.trip_pos .trip_buy {
+	Z-INDEX: 1000; POSITION: absolute; PADDING-LEFT: 40px; WIDTH: 255px; HEIGHT: 94px; TOP: 0px; FONT-WEIGHT: bold; LEFT: -70px
+}
+.color_720c00 {
+	COLOR: #720c00; FONT-SIZE: 18px
+}
+.bg_hei {
+	TEXT-ALIGN: left; LINE-HEIGHT: 23px; PADDING-LEFT: 5px; WIDTH: 32px; DISPLAY: inline-block; FONT-FAMILY: Arial; BACKGROUND: url(../../pics/hotel/hotgroup/img_bj.png) no-repeat -248px 0px; LETTER-SPACING: 5px; HEIGHT: 23px; COLOR: #fff; FONT-SIZE: 20px; FONT-WEIGHT: bold; MARGIN-RIGHT: 1px
+}
+.time_mh {
+	TEXT-ALIGN: center; LINE-HEIGHT: 23px; WIDTH: 12px; DISPLAY: inline-block; FONT-FAMILY: 'ËÎÌו'; HEIGHT: 23px; FONT-SIZE: 26px; OVERFLOW: hidden
+}
+.deal_samebox .r P {
+	LINE-HEIGHT: 27px
+}
+.infraestructura {
+	WIDTH: 640px; MARGIN-BOTTOM: 10px; HEIGHT: 219px
+}
+.infraestructura LI {
+	MARGIN: 0px 4px 4px 0px; WIDTH: 67px; DISPLAY: inline; FLOAT: left; HEIGHT: 69px
+}
+.infraestructura LI.facility_1_1 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat left top
+}
+.infraestructura LI.facility_1_2 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -72px top
+}
+.infraestructura LI.facility_1_3 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -144px top
+}
+.infraestructura LI.facility_1_4 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -216px top
+}
+.infraestructura LI.facility_1_5 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -288px top
+}
+.infraestructura LI.facility_1_6 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -360px top
+}
+.infraestructura LI.facility_1_7 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -432px top
+}
+.infraestructura LI.facility_1_8 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -504px top
+}
+.infraestructura LI.facility_1_9 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -576px top
+}
+.infraestructura LI.facility_1_10 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat left -72px
+}
+.infraestructura LI.facility_1_11 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -72px -72px
+}
+.infraestructura LI.facility_1_12 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -144px -72px
+}
+.infraestructura LI.facility_1_13 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -216px -72px
+}
+.infraestructura LI.facility_1_14 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -288px -72px
+}
+.infraestructura LI.facility_1_15 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -360px -72px
+}
+.infraestructura LI.facility_1_16 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -432px -72px
+}
+.infraestructura LI.facility_1_17 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -504px -72px
+}
+.infraestructura LI.facility_1_18 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -576px -72px
+}
+.infraestructura LI.facility_1_19 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat left -144px
+}
+.infraestructura LI.facility_1_20 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -72px -144px
+}
+.infraestructura LI.facility_1_21 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -144px -144px
+}
+.infraestructura LI.facility_1_22 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -216px -144px
+}
+.infraestructura LI.facility_1_23 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -288px -144px
+}
+.infraestructura LI.facility_1_24 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -360px -144px
+}
+.infraestructura LI.facility_1_25 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -432px -144px
+}
+.infraestructura LI.facility_1_26 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -504px -144px
+}
+.infraestructura LI.facility_1_27 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -576px -144px
+}
+.infraestructura LI.facility_2_1 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat left top
+}
+.infraestructura LI.facility_2_2 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat -72px top
+}
+.infraestructura LI.facility_2_3 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat -144px top
+}
+.infraestructura LI.facility_2_4 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat -216px top
+}
+.infraestructura LI.facility_2_5 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat -288px top
+}
+.infraestructura LI.facility_2_6 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat -360px top
+}
+.infraestructura LI.facility_2_7 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat -432px top
+}
+.infraestructura LI.facility_2_8 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat -504px top
+}
+.infraestructura LI.facility_2_9 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat -576px top
+}
+.infraestructura LI.facility_2_10 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat left -72px
+}
+.infraestructura LI.facility_2_11 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat -72px -72px
+}
+.infraestructura LI.facility_2_12 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat -144px -72px
+}
+.infraestructura LI.facility_2_13 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat -216px -72px
+}
+.infraestructura LI.facility_2_14 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat -288px -72px
+}
+.infraestructura LI.facility_2_15 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat -360px -72px
+}
+.infraestructura LI.facility_2_16 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat -432px -72px
+}
+.infraestructura LI.facility_2_17 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat -504px -72px
+}
+.infraestructura LI.facility_2_18 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat -576px -72px
+}
+.infraestructura LI.facility_2_19 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat left -144px
+}
+.infraestructura LI.facility_2_20 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat -72px -144px
+}
+.infraestructura LI.facility_2_21 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat -144px -144px
+}
+.infraestructura LI.facility_2_22 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat -216px -144px
+}
+.infraestructura LI.facility_2_23 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat -288px -144px
+}
+.infraestructura LI.facility_2_24 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat -360px -144px
+}
+.infraestructura LI.facility_2_25 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat -432px -144px
+}
+.infraestructura LI.facility_2_26 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat -504px -144px
+}
+.infraestructura LI.facility_2_27 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/pagar01.jpg) no-repeat -576px -144px
+}
+.infraestructura LI.facility_0_1 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat left top
+}
+.infraestructura LI.facility_0_2 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat -72px top
+}
+.infraestructura LI.facility_0_3 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat -144px top
+}
+.infraestructura LI.facility_0_4 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat -216px top
+}
+.infraestructura LI.facility_0_5 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat -288px top
+}
+.infraestructura LI.facility_0_6 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat -360px top
+}
+.infraestructura LI.facility_0_7 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat -432px top
+}
+.infraestructura LI.facility_0_8 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat -504px top
+}
+.infraestructura LI.facility_0_9 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat -576px top
+}
+.infraestructura LI.facility_0_10 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat left -72px
+}
+.infraestructura LI.facility_0_11 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat -72px -72px
+}
+.infraestructura LI.facility_0_12 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat -144px -72px
+}
+.infraestructura LI.facility_0_13 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat -216px -72px
+}
+.infraestructura LI.facility_0_14 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat -288px -72px
+}
+.infraestructura LI.facility_0_15 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat -360px -72px
+}
+.infraestructura LI.facility_0_16 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat -432px -72px
+}
+.infraestructura LI.facility_0_17 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat -504px -72px
+}
+.infraestructura LI.facility_0_18 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat -576px -72px
+}
+.infraestructura LI.facility_0_19 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat left -144px
+}
+.infraestructura LI.facility_0_20 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat -72px -144px
+}
+.infraestructura LI.facility_0_21 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat -144px -144px
+}
+.infraestructura LI.facility_0_22 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat -216px -144px
+}
+.infraestructura LI.facility_0_23 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat -288px -144px
+}
+.infraestructura LI.facility_0_24 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat -360px -144px
+}
+.infraestructura LI.facility_0_25 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat -432px -144px
+}
+.infraestructura LI.facility_0_26 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat -504px -144px
+}
+.infraestructura LI.facility_0_27 {
+	BACKGROUND: url(../../pics/hotel/hotgroup/no01.jpg) no-repeat -576px -144px
+}
+.text_align_r {
+	TEXT-ALIGN: right; MARGIN: 5px 0px 30px; HEIGHT: 24px
+}
+.text_align_r SPAN {
+	TEXT-ALIGN: center; LINE-HEIGHT: 26px; WIDTH: 73px; DISPLAY: inline-block; HEIGHT: 26px; COLOR: #fff; FONT-SIZE: 14px; FONT-WEIGHT: bold; MARGIN-RIGHT: 4px
+}
+.text_align_r SPAN.propor {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat left bottom
+}
+.text_align_r SPAN.pagar {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -78px bottom
+}
+.text_align_r SPAN.no {
+	BACKGROUND: url(../../pics/hotel/hotgroup/propor01.jpg) no-repeat -156px bottom
+}
+.jcss_title {
+	MARGIN: 15px auto
+}
