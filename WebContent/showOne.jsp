@@ -9,7 +9,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %> 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <!-- saved from url=(0047)http://www.lashou.com/travel/detail/859836.html -->
-<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>广州银行号船票1张 | 酒店旅游 国内旅游设施(温泉等) | 拉手网广州</TITLE>
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>${goods.name}</TITLE>
 <META content="text/html; charset=utf-8" http-equiv=Content-Type>
 <META content=152031106064130756375 property="qc:admins">
 <META content=IE=7 http-equiv=x-ua-compatible>
@@ -355,7 +355,7 @@ $(function(){
 		$.ajax({
 			url:'goods~addGWC.do?gid=${goods.id}',
 			success:function(){
-				$('.cm-success').html('<SPAN class=c_cion></SPAN>团购已成功，可继续购买');
+				//$('.cm-success').html('<SPAN class=c_cion></SPAN>团购已成功，可继续购买');
 				alert("添加购物车成功!!!");
 			}
 		});

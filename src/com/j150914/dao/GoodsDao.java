@@ -6,7 +6,8 @@ import java.util.List;
 
 import com.j150914.pojo.Goods;
 
-//bid,bname,bookpric,bimgs,bconut,btype,
+@SuppressWarnings("all")
+// bid,bname,bookpric,bimgs,bconut,btype,
 public class GoodsDao extends BaseDao {
 
 	public List<Goods> findByPage(int page, int pageSize) {
@@ -33,9 +34,11 @@ public class GoodsDao extends BaseDao {
 		}
 		return 0;
 	}
+
 	public int countType(int typeid) {
 		try {
-			ResultSet rs = super.query("select count(*) from t_goods where type = ?",typeid);
+			ResultSet rs = super.query(
+					"select count(*) from t_goods where type = ?", typeid);
 			if (rs.next()) {
 				return rs.getInt(1);
 			}
@@ -45,5 +48,10 @@ public class GoodsDao extends BaseDao {
 			e.printStackTrace();
 		}
 		return 0;
+	}
+
+	public List<Goods> findGoodIdIsIn(String goodid) {
+		String sql = "select * from t_goods where id in (?) ";
+		return findSome(sql, goodid);
 	}
 }

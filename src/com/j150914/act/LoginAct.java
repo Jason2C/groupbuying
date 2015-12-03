@@ -39,6 +39,7 @@ public class LoginAct implements IAction {
 					HttpSession session = request.getSession();
 					session.setAttribute("name", users.getUsername());
 					session.setAttribute("pw", users.getUserpwd());
+					session.setAttribute("gwc", null);
 				} else {
 					return "@red_login.jsp";
 				}

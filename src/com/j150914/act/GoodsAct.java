@@ -1,6 +1,8 @@
 package com.j150914.act;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -41,7 +43,7 @@ public class GoodsAct implements IAction {
 		request.setAttribute("glSize", goodList.size());
 		request.setAttribute("currpage", currpage);
 		request.setAttribute("pageSize", pageSize);
-		 
+
 		if (last % pageSize == 0) {
 			last = last / pageSize;
 		} else {
@@ -57,16 +59,73 @@ public class GoodsAct implements IAction {
 		request.setAttribute("goods", goods);
 		return "showOne.jsp";
 	}
+
+	@SuppressWarnings("unchecked")
 	public String addGWC(HttpServletRequest request,
 			HttpServletResponse response) {
-		Map<Integer, Integer> gwc=new HashMap<>();
+		Map<Integer, Integer> gwc;
+		gwc = (Map<Integer, Integer>) request.getSession().getAttribute("gwc");
+		if (gwc == null) {
+			gwc = new HashMap<>();
+		}
+		Iterator<Integer> keys = gwc.keySet().iterator();
+		if (keys.hasNext()) {
+			while (keys.hasNext()) {
+				Integer integer = (Integer) keys.next();
+				if (gid == integer) {
+					Integer integer2 = gwc.get(integer) + 1;
+					gwc.put(gid, integer2);
+					request.getSession().setAttribute("gwc", gwc);
+					return null;
+				}
+			}
+		}
 		gwc.put(gid, 1);
-
-		return "showOne.jsp";
+		request.getSession().setAttribute("gwc", gwc);
+		return null;
 	}
 
-	
-	
+	@SuppressWarnings({ "unchecked", "unused" })
+	public String goGWC(HttpServletRequest request, HttpServletResponse response) {
+		String goodgwc = "";
+		if (request.getSession().getAttribute("gwc") != null) {
+			Map<Integer, Integer> gwc = (Map<Integer, Integer>) request
+					.getSession().getAttribute("gwc");
+			if (gwc != null) {
+				Iterator<Integer> keys = gwc.keySet().iterator();
+				for (int i = 0; i < gwc.size(); i++) {
+					Integer key = (Integer) keys.next();
+					Integer value = gwc.get(key);
+					if ("".equals(goodgwc)) {
+						goodgwc = key + "";
+					} else {
+						if (i == gwc.size() - 1) {
+							goodgwc = goodgwc + "," + key;
+						} else {
+							goodgwc = goodgwc + ",'" + key + "'";
+						}
+					}
+				}
+				keys = gwc.keySet().iterator();
+				List<Goods> beanGWC = new ArrayList<>();
+				List<Goods> list = goodsDao.findGoodIdIsIn(goodgwc);
+				System.out.println(list.size());
+				while (keys.hasNext()) {
+					for (Goods goods2 : list) {
+						Integer key = (Integer) keys.next();
+						Integer value = gwc.get(key);
+						if (goods2.getId() == key) {
+							goods2.setTuangoucount(value);
+							beanGWC.add(goods2);
+						}
+					}
+				}
+				request.getSession().setAttribute("showGwc", beanGWC);
+			}
+		}
+
+		return "showGwc.jsp";
+	}
 
 	public int getCurrpage() {
 		return currpage;

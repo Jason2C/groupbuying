@@ -182,6 +182,15 @@
 				<span id="n_ml" class="nav-my"> <a class="sub"
 					href="http://www.lashou.com/mycode.php">用户中心<em></em></a>
 					<ul class="n-h-list" style="display: none">
+						<li><a href="
+								<c:choose>  
+								   <c:when test="${name!=null}">
+								   		goods~goGWC.do
+								   </c:when>  
+								   <c:otherwise>  
+								   		login.jsp  
+								   </c:otherwise>  
+								</c:choose>">我的购物车</a></li>
 						<li><a href="http://www.lashou.com/mycode.php">我的拉手券</a></li>
 						<li><a href="http://www.lashou.com/mygo.php">我的订单</a></li>
 						<li><a href="http://www.lashou.com/mycollection.php">我的收藏</a></li>
