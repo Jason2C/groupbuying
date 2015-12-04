@@ -50,8 +50,16 @@ public class GoodsDao extends BaseDao {
 		return 0;
 	}
 
-	public List<Goods> findGoodIdIsIn(String goodid) {
-		String sql = "select * from t_goods where id in (?) ";
+	public List<Goods> findGoodIdIsIn(int goodid[]) {
+		String sql = "select * from t_goods where id in (";
+		for (int i = 0; i < goodid.length; i++) {
+			if (i ==0) {
+				sql = sql + "?";
+			}else {
+				sql = sql + ",?";
+			}
+		}
+		sql = sql + ")";
 		return findSome(sql, goodid);
 	}
 }

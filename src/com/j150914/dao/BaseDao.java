@@ -17,11 +17,11 @@ import javax.naming.Context;
 import javax.sql.DataSource;
 
 /**
- * @1.dao°üºÍpojo °üµÄÇ°×ºÒªÒ»ÖÂ
- * @2.UserDao ËüµÄpojo ÊÇUser
- * @3.pojoµÄÊôĞÔÃüÃûÒª¸ú±íµÄ×Ö¶ÎÃüÃûÒ»ÖÂ
- * @4.ÔÚÅäÖÃÎÄ¼şÖĞÅä±íÇ°×º
- * @idÊôĞÔÊÇµÚÒ»¸ö
+ * @1.daoï¿½ï¿½ï¿½pojo ï¿½ï¿½ï¿½Ç°×ºÒªÒ»ï¿½ï¿½
+ * @2.UserDao ï¿½ï¿½ï¿½pojo ï¿½ï¿½User
+ * @3.pojoï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Ö¶ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
+ * @4.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°×º
+ * @idï¿½ï¿½ï¿½ï¿½ï¿½Çµï¿½Ò»ï¿½ï¿½
  * @author Administrator
  * 
  */
@@ -29,9 +29,9 @@ public class BaseDao {
 
 	private Connection connection;
 	private PreparedStatement pstm;
-	DataSource ds=null;
+	DataSource ds = null;
 	/**
-	 * ±íÇ°×º
+	 * ï¿½ï¿½Ç°×º
 	 */
 	private String tableprefix;
 
@@ -43,13 +43,12 @@ public class BaseDao {
 
 			tableprefix = properties.getProperty("tableprefix");
 
-			// Í¨¹ıjndi £ºjavaÃüÃû½Ó¿Ú
+			// Í¨ï¿½ï¿½jndi ï¿½ï¿½javaï¿½ï¿½ï¿½ï¿½Ó¿ï¿½
 			Context ctx = new javax.naming.InitialContext();
-			// È¡µÃTomcatµÄjndiÉÏÏÂÎÄ
+			// È¡ï¿½ï¿½Tomcatï¿½ï¿½jndiï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			Context Tomcatctx = (Context) ctx.lookup("java:comp/env");
-			//»ñÈ¡jndiÀïÃæµÄÁ¬½Ó³Ø
+			// ï¿½ï¿½È¡jndiï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó³ï¿½
 			ds = (DataSource) Tomcatctx.lookup("jdbc/db");
- 
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -58,7 +57,7 @@ public class BaseDao {
 	}
 
 	/**
-	 * ×Ô¶¯·â×°
+	 * ï¿½Ô¶ï¿½ï¿½ï¿½×°
 	 * 
 	 * @param rs
 	 * @return
@@ -66,33 +65,33 @@ public class BaseDao {
 	private Object AutoSetter(ResultSet rs) {
 		Object pojo = null;
 		Class daoClass = this.getClass();
-		// °Ñ°üÃûµÄdaoÌæ»»³Épojo
+		// ï¿½Ñ°ï¿½ï¿½ï¿½ï¿½daoï¿½æ»»ï¿½ï¿½pojo
 		String pojoName = daoClass.getName().replace("dao", "pojo");
-		// °ÑÀàÃûµÄDaoÈ¥µô
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½DaoÈ¥ï¿½ï¿½
 		pojoName = pojoName.substring(0, pojoName.length() - 3);
 
 		try {
 			Class pojoClass = Class.forName(pojoName);
-			// ÀûÓÃ·´ÉäµÃµ½¶ÔÏó
+			// ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½
 			pojo = pojoClass.newInstance();
-			// µÃµ½ÀàµÄÊôĞÔ
+			// ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			Field[] fields = pojoClass.getDeclaredFields();
-			// µü´úÊôĞÔ
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			for (int i = 0; i < fields.length; i++) {
-				// ¸ù¾İÀàÊôĞÔÃû×ÖĞŞ¸Ä³Éset·½·¨Ãû
+				// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ş¸Ä³ï¿½setï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				String setMethonName = "set"
 						+ fields[i].getName().substring(0, 1).toUpperCase()
 						+ fields[i].getName().substring(1,
 								fields[i].getName().length());
 				// System.out.println(setMethonName);
-				// µÃµ½·½·¨
+				// ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½
 				Method setMethod = pojoClass.getMethod(setMethonName,
 						fields[i].getType());
-				// µÃµ½½á¹û¼¯µÄÖµ
+				// ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½Öµ
 				Object values = rs.getObject(fields[i].getName());
 
 				if (values != null) {
-					// Ö´ĞĞSetter·½·¨
+					// Ö´ï¿½ï¿½Setterï¿½ï¿½ï¿½ï¿½
 					setMethod.invoke(pojo, values);
 				}
 
@@ -129,7 +128,7 @@ public class BaseDao {
 	}
 
 	/**
-	 * ²éÕÒÒ»¸ö
+	 * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
 	 * 
 	 * @param sql
 	 * @param objects
@@ -153,7 +152,7 @@ public class BaseDao {
 	}
 
 	/**
-	 * ²éÕÒ¶à¸ö
+	 * ï¿½ï¿½ï¿½Ò¶ï¿½ï¿½
 	 * 
 	 * @param sql
 	 * @param objects
@@ -176,8 +175,25 @@ public class BaseDao {
 
 	}
 
+	protected List findSome(String sql, int[] objects) {
+		List list = new ArrayList();
+		ResultSet rs = query(sql, objects);
+		try {
+			while (rs.next()) {
+				list.add(AutoSetter(rs));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			this.closeConnection();
+		}
+		return list;
+
+	}
+
 	/**
-	 * ²éÕÒ
+	 * ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @param sql
 	 * @param objects
@@ -189,7 +205,7 @@ public class BaseDao {
 		try {
 			pstm = this.getConnection().prepareStatement(sql);
 
-			// Ìî³äÕ¼Î»·û
+			// ï¿½ï¿½ï¿½Õ¼Î»ï¿½ï¿½
 			if (objects != null) {
 				for (int i = 0; i < objects.length; i++) {
 					pstm.setObject(i + 1, objects[i]);
@@ -201,12 +217,34 @@ public class BaseDao {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		// ÒòÎª·µ»ØµÄ½á¹û¼¯ºóÆÚÒªÓÃ²»ÄÜ¹Ø±ÕÁ¬½Ó
+		// ï¿½ï¿½Îªï¿½ï¿½ï¿½ØµÄ½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ã²ï¿½ï¿½Ü¹Ø±ï¿½ï¿½ï¿½ï¿½ï¿½
+		return set;
+	}
+
+	protected ResultSet query(String sql, int[] objects) {
+		ResultSet set = null;
+
+		try {
+			pstm = this.getConnection().prepareStatement(sql);
+
+			// ï¿½ï¿½ï¿½Õ¼Î»ï¿½ï¿½
+			if (objects != null) {
+				for (int i = 0; i < objects.length; i++) {
+					pstm.setObject(i + 1, objects[i]);
+				}
+			}
+			System.out.println(pstm);
+			set = pstm.executeQuery();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// ï¿½ï¿½Îªï¿½ï¿½ï¿½ØµÄ½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ã²ï¿½ï¿½Ü¹Ø±ï¿½ï¿½ï¿½ï¿½ï¿½
 		return set;
 	}
 
 	/**
-	 * ÈÚºÏ
+	 * ï¿½Úºï¿½
 	 * 
 	 * @param sql
 	 * @param objects
@@ -217,7 +255,7 @@ public class BaseDao {
 
 		try {
 			pstm = this.getConnection().prepareStatement(sql);
-			// Ìî³äÕ¼Î»·û
+			// ï¿½ï¿½ï¿½Õ¼Î»ï¿½ï¿½
 			if (objects != null) {
 				for (int i = 0; i < objects.length; i++) {
 					pstm.setObject(i + 1, objects[i]);
@@ -236,21 +274,21 @@ public class BaseDao {
 	}
 
 	/**
-	 * »ñÈ¡Á¬½Ó
+	 * ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @return
 	 */
 	protected Connection getConnection() {
 		try {
-			// ¼ÙÈçÁ¬½ÓÎª¿Õ
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½
 			if (connection == null) {
-				// ´´½¨Á¬½Ó
+				// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				connection = ds.getConnection();
 
 			} else {
-				// Á¬½Ó¹Ø±ÕµÄÊ±ºò
+				// ï¿½ï¿½ï¿½Ó¹Ø±Õµï¿½Ê±ï¿½ï¿½
 				if (connection.isClosed()) {
-					// ´´½¨Á¬½Ó
+					// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 					connection = ds.getConnection();
 				}
 			}
@@ -262,7 +300,7 @@ public class BaseDao {
 	}
 
 	/**
-	 * ¹Ø±ÕÁ¬½Ó
+	 * ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½
 	 */
 	protected void closeConnection() {
 		if (connection != null) {
@@ -278,22 +316,22 @@ public class BaseDao {
 	}
 
 	/**
-	 * Í¨ÓÃÉ¾³ı
+	 * Í¨ï¿½ï¿½É¾ï¿½ï¿½
 	 * 
 	 * @param id
-	 *            ±íID
+	 *            ï¿½ï¿½ID
 	 * @return
 	 */
 	public int Delete(int id) {
 		int reslutInt = 0;
 
 		Class daoClass = this.getClass();
-		// °Ñ°üÃûµÄdaoÌæ»»³Épojo
+		// ï¿½Ñ°ï¿½ï¿½ï¿½ï¿½daoï¿½æ»»ï¿½ï¿½pojo
 		String pojoName = daoClass.getName().replace("dao", "pojo");
 
-		// °ÑÀàÃûµÄDaoÈ¥µô
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½DaoÈ¥ï¿½ï¿½
 		pojoName = pojoName.substring(0, pojoName.length() - 3);
-		// Í¨¹ıpojoÂ·¾¶ÄÃµ½±íÃ÷
+		// Í¨ï¿½ï¿½pojoÂ·ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½
 		String tableName = tableprefix
 				+ pojoName.substring(pojoName.indexOf("pojo") + 5);
 		StringBuilder sql = new StringBuilder("delete  from  " + tableName
@@ -313,7 +351,7 @@ public class BaseDao {
 	}
 
 	/**
-	 * Í¨ÓÃupdate
+	 * Í¨ï¿½ï¿½update
 	 * 
 	 * @param pojoObject
 	 * @return
@@ -321,15 +359,15 @@ public class BaseDao {
 	public int Update(Object pojoObject) {
 		int resultInt = 0;
 		Class daoClass = this.getClass();
-		// °Ñ°üÃûµÄdaoÌæ»»³Épojo
+		// ï¿½Ñ°ï¿½ï¿½ï¿½ï¿½daoï¿½æ»»ï¿½ï¿½pojo
 		String pojoName = daoClass.getName().replace("dao", "pojo");
 
-		// °ÑÀàÃûµÄDaoÈ¥µô
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½DaoÈ¥ï¿½ï¿½
 		pojoName = pojoName.substring(0, pojoName.length() - 3);
-		// Í¨¹ıpojoÂ·¾¶ÄÃµ½±íÃ÷
+		// Í¨ï¿½ï¿½pojoÂ·ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½
 		String tableName = tableprefix
 				+ pojoName.substring(pojoName.indexOf("pojo") + 5);
-		// ¶¯Ì¬Æ´½ÓSQL
+		// ï¿½ï¿½Ì¬Æ´ï¿½ï¿½SQL
 		StringBuilder sql = new StringBuilder("update   " + tableName
 				+ " set  ");
 
@@ -338,10 +376,10 @@ public class BaseDao {
 
 			Field[] fis = pojoClass.getDeclaredFields();
 
-			// Æ´½Ó update t_User set name = ?,sex = ?,age = ?,pw = ?
+			// Æ´ï¿½ï¿½ update t_User set name = ?,sex = ?,age = ?,pw = ?
 			for (int i = 1; i < fis.length; i++) {
 				sql.append(fis[i].getName() + " = ?");
-				// ×îºóÒ»¸ö£¬²»¼Ó
+				// ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				if (i != fis.length - 1) {
 					sql.append(",");
 				}
@@ -349,27 +387,27 @@ public class BaseDao {
 			// update t_User set name = ?,sex = ?,age = ?,pw = ? where id= ?
 			sql.append(" where " + fis[0].getName() + "   =?");
 
-			// ¶¯Ì¬µ÷ÓÃgetter·½·¨£¬²¢ÇÒ°ÑÖµ·Åµ½paramsÊı×éµ±ÖĞ
-			Object[] params = new Object[fis.length]; // UPDATEÓï¾ä´øIDËùÒÔ²»-1
+			// ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½getterï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò°ï¿½Öµï¿½Åµï¿½paramsï¿½ï¿½ï¿½éµ±ï¿½ï¿½
+			Object[] params = new Object[fis.length]; // UPDATEï¿½ï¿½ï¿½ï¿½IDï¿½ï¿½ï¿½Ô²ï¿½-1
 			for (int i = 1; i < fis.length; i++) {
-				// ¶¯Ì¬Æ´½Ógetter·½·¨
+				// ï¿½ï¿½Ì¬Æ´ï¿½ï¿½getterï¿½ï¿½ï¿½ï¿½
 				String getMethodName = "get"
 						+ fis[i].getName().substring(0, 1).toUpperCase()
 						+ fis[i].getName().substring(1);
-				// »ñÈ¡get·½·¨
+				// ï¿½ï¿½È¡getï¿½ï¿½ï¿½ï¿½
 				Method getMethod = pojoClass.getMethod(getMethodName);
-				// µ÷ÓÃgetter·½·¨·Åµ½Êı×éµ±ÖĞ
+				// ï¿½ï¿½ï¿½ï¿½getterï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½ï¿½ï¿½ï¿½éµ±ï¿½ï¿½
 				params[i - 1] = getMethod.invoke(pojoObject);
 			}
 
-			// Ìî³äid
-			// ¶¯Ì¬Æ´½Ógetter·½·¨
+			// ï¿½ï¿½ï¿½id
+			// ï¿½ï¿½Ì¬Æ´ï¿½ï¿½getterï¿½ï¿½ï¿½ï¿½
 			String getMethodName = "get"
 					+ fis[0].getName().substring(0, 1).toUpperCase()
 					+ fis[0].getName().substring(1);
-			// »ñÈ¡get·½·¨
+			// ï¿½ï¿½È¡getï¿½ï¿½ï¿½ï¿½
 			Method getMethod = pojoClass.getMethod(getMethodName);
-			// µ÷ÓÃgetter·½·¨·Åµ½Êı×éµ±ÖĞ
+			// ï¿½ï¿½ï¿½ï¿½getterï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½ï¿½ï¿½ï¿½éµ±ï¿½ï¿½
 			params[fis.length - 1] = getMethod.invoke(pojoObject);
 
 			resultInt = merge(sql.toString(), params);
@@ -399,7 +437,7 @@ public class BaseDao {
 	}
 
 	/**
-	 * Í¨ÓÃ²åÈë
+	 * Í¨ï¿½Ã²ï¿½ï¿½ï¿½
 	 * 
 	 * @param pojoObject
 	 * @return
@@ -408,15 +446,15 @@ public class BaseDao {
 		int reslutInt = 0;
 
 		Class daoClass = this.getClass();
-		// °Ñ°üÃûµÄdaoÌæ»»³Épojo
+		// ï¿½Ñ°ï¿½ï¿½ï¿½ï¿½daoï¿½æ»»ï¿½ï¿½pojo
 		String pojoName = daoClass.getName().replace("dao", "pojo");
 
-		// °ÑÀàÃûµÄDaoÈ¥µô
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½DaoÈ¥ï¿½ï¿½
 		pojoName = pojoName.substring(0, pojoName.length() - 3);
-		// Í¨¹ıpojoÂ·¾¶ÄÃµ½±íÃ÷
+		// Í¨ï¿½ï¿½pojoÂ·ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½
 		String tableName = tableprefix
 				+ pojoName.substring(pojoName.indexOf("pojo") + 5);
-		// ¶¯Ì¬Æ´½ÓSQL
+		// ï¿½ï¿½Ì¬Æ´ï¿½ï¿½SQL
 		StringBuilder sql = new StringBuilder("insert  into  " + tableName
 				+ " ( ");
 		try {
@@ -426,7 +464,7 @@ public class BaseDao {
 
 			for (int i = 1; i < fis.length; i++) {
 				sql.append(fis[i].getName());
-				// ×îºóÒ»¸ö£¬²»¼Ó
+				// ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				if (i != fis.length - 1) {
 					sql.append(",");
 				}
@@ -435,23 +473,23 @@ public class BaseDao {
 			sql.append(" values( ");
 			for (int i = 1; i < fis.length; i++) {
 				sql.append(" ? ");
-				// ×îºóÒ»¸ö£¬²»¼Ó
+				// ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				if (i != fis.length - 1) {
 					sql.append(",");
 				}
 			}
 			sql.append(")");
 
-			// ¶¯Ì¬µ÷ÓÃgetter·½·¨£¬²¢ÇÒ°ÑÖµ·Åµ½paramsÊı×éµ±ÖĞ
+			// ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½getterï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò°ï¿½Öµï¿½Åµï¿½paramsï¿½ï¿½ï¿½éµ±ï¿½ï¿½
 			Object[] params = new Object[fis.length - 1];
 			for (int i = 1; i < fis.length; i++) {
-				// ¶¯Ì¬Æ´½Ógetter·½·¨
+				// ï¿½ï¿½Ì¬Æ´ï¿½ï¿½getterï¿½ï¿½ï¿½ï¿½
 				String getMethodName = "get"
 						+ fis[i].getName().substring(0, 1).toUpperCase()
 						+ fis[i].getName().substring(1);
-				// »ñÈ¡get·½·¨
+				// ï¿½ï¿½È¡getï¿½ï¿½ï¿½ï¿½
 				Method getMethod = pojoClass.getMethod(getMethodName);
-				// µ÷ÓÃgetter·½·¨·Åµ½Êı×éµ±ÖĞ
+				// ï¿½ï¿½ï¿½ï¿½getterï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½ï¿½ï¿½ï¿½éµ±ï¿½ï¿½
 				params[i - 1] = getMethod.invoke(pojoObject);
 			}
 
@@ -480,22 +518,22 @@ public class BaseDao {
 	}
 
 	/**
-	 * Í¨ÓÃ²éÕÒID
+	 * Í¨ï¿½Ã²ï¿½ï¿½ï¿½ID
 	 * 
 	 * @param id
 	 * @return
 	 */
 	public Object findById(int id) {
-		// È¡µÃ×Ô¼º
+		// È¡ï¿½ï¿½ï¿½Ô¼ï¿½
 		Class daoClass = this.getClass();
 		String tableName = daoClass.getName().substring(
 				daoClass.getName().indexOf("dao") + 4);
 		tableName = tableprefix
 				+ tableName.substring(0, tableName.length() - 3);
-		// °Ñ°üÃûµÄdaoÌæ»»³Épojo
+		// ï¿½Ñ°ï¿½ï¿½ï¿½ï¿½daoï¿½æ»»ï¿½ï¿½pojo
 		String pojoName = daoClass.getName().replace("dao", "pojo");
 
-		// °ÑÀàÃûµÄDaoÈ¥µô
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½DaoÈ¥ï¿½ï¿½
 		pojoName = pojoName.substring(0, pojoName.length() - 3);
 		String sql = "select * from  " + tableName + " where   ";
 		try {
@@ -517,12 +555,12 @@ public class BaseDao {
 	}
 
 	/**
-	 * ¶¯Ì¬select * from t_xxx
+	 * ï¿½ï¿½Ì¬select * from t_xxx
 	 * 
 	 * @return
 	 */
 	public String getSelectAll() {
-		// È¡µÃ×Ô¼º
+		// È¡ï¿½ï¿½ï¿½Ô¼ï¿½
 		Class daoClz = this.getClass();
 		String tableName = daoClz.getName().substring(
 				daoClz.getName().indexOf("dao") + 4);
@@ -534,25 +572,25 @@ public class BaseDao {
 	}
 
 	/**
-	 * Éú³ÉpojoTitle
+	 * ï¿½ï¿½ï¿½pojoTitle
 	 */
 	public void autoGenPojoTitle() {
 		Object pojo = null;
-		// È¡µÃ×Ô¼º
+		// È¡ï¿½ï¿½ï¿½Ô¼ï¿½
 		Class daoClz = this.getClass();
 
 		String pojoName = daoClz.getName().substring(
 				daoClz.getName().indexOf("dao") + 4);
 
-		// È¥classpathËÑË÷²¢¼ÓÔØpojo
+		// È¥classpathï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½pojo
 		StringBuilder toCopy = new StringBuilder("//");
 		StringBuilder title = new StringBuilder(
 				"import java.io.Serializable;\n\n");
 		title.append("public class ");
-		title.append(pojoName.substring(0, pojoName.length() - 3)); // È¥³ı¡°Dao¡±
+		title.append(pojoName.substring(0, pojoName.length() - 3)); // È¥ï¿½ï¿½Daoï¿½ï¿½
 		title.append(" implements Serializable {\n\n");
 		String name;
-		// Ğ´ÊôĞÔ ---·¢Æğsql²éÑ¯£ºÈ¡»Ø±í¶¨Òå
+		// Ğ´ï¿½ï¿½ï¿½ï¿½ ---ï¿½ï¿½ï¿½ï¿½sqlï¿½ï¿½Ñ¯ï¿½ï¿½È¡ï¿½Ø±?ï¿½ï¿½
 		if (this.getConnection() != null) {
 
 			try {
@@ -575,7 +613,7 @@ public class BaseDao {
 						title.append("  Double ");
 
 					} else {
-						title.append(" ×Ô¼º¶¨¶á ");
+						title.append(" ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ ");
 					}
 
 					title.append("  ");

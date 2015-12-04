@@ -63,60 +63,56 @@ public class GoodsAct implements IAction {
 	@SuppressWarnings("unchecked")
 	public String addGWC(HttpServletRequest request,
 			HttpServletResponse response) {
-		Map<Integer, Integer> gwc;
-		gwc = (Map<Integer, Integer>) request.getSession().getAttribute("gwc");
-		if (gwc == null) {
-			gwc = new HashMap<>();
-		}
-		Iterator<Integer> keys = gwc.keySet().iterator();
-		if (keys.hasNext()) {
-			while (keys.hasNext()) {
-				Integer integer = (Integer) keys.next();
-				if (gid == integer) {
-					Integer integer2 = gwc.get(integer) + 1;
-					gwc.put(gid, integer2);
-					request.getSession().setAttribute("gwc", gwc);
-					return null;
+		try {
+			Map<Integer, Integer> gwc;
+			gwc = (Map<Integer, Integer>) request.getSession().getAttribute(
+					"gwc");
+			if (gwc == null) {
+				gwc = new HashMap<>();
+			}
+			Iterator<Integer> keys = gwc.keySet().iterator();
+			if (keys.hasNext()) {
+				while (keys.hasNext()) {
+					Integer integer = (Integer) keys.next();
+					if (gid == integer) {
+						Integer integer2 = gwc.get(integer) + 1;
+						gwc.put(gid, integer2);
+						request.getSession().setAttribute("gwc", gwc);
+						return "@json_true";
+					}
 				}
 			}
+			gwc.put(gid, 1);
+			request.getSession().setAttribute("gwc", gwc);
+			return "@json_true";
+		} catch (Exception e) {
+			// TODO: handle exception
+			return "@json_fales";
 		}
-		gwc.put(gid, 1);
-		request.getSession().setAttribute("gwc", gwc);
-		return null;
 	}
 
-	@SuppressWarnings({ "unchecked", "unused" })
+	@SuppressWarnings({ "unchecked" })
 	public String goGWC(HttpServletRequest request, HttpServletResponse response) {
-		String goodgwc = "";
 		if (request.getSession().getAttribute("gwc") != null) {
 			Map<Integer, Integer> gwc = (Map<Integer, Integer>) request
 					.getSession().getAttribute("gwc");
+			int keygwc[] = new int[gwc.size()];
+			int valuegwc[] = new int[gwc.size()];
 			if (gwc != null) {
 				Iterator<Integer> keys = gwc.keySet().iterator();
 				for (int i = 0; i < gwc.size(); i++) {
 					Integer key = (Integer) keys.next();
 					Integer value = gwc.get(key);
-					if ("".equals(goodgwc)) {
-						goodgwc = key + "";
-					} else {
-						if (i == gwc.size() - 1) {
-							goodgwc = goodgwc + "," + key;
-						} else {
-							goodgwc = goodgwc + ",'" + key + "'";
-						}
-					}
+					keygwc[i] = key;
+					valuegwc[i] = value;
 				}
-				keys = gwc.keySet().iterator();
 				List<Goods> beanGWC = new ArrayList<>();
-				List<Goods> list = goodsDao.findGoodIdIsIn(goodgwc);
-				System.out.println(list.size());
-				while (keys.hasNext()) {
-					for (Goods goods2 : list) {
-						Integer key = (Integer) keys.next();
-						Integer value = gwc.get(key);
-						if (goods2.getId() == key) {
-							goods2.setTuangoucount(value);
-							beanGWC.add(goods2);
+				List<Goods> list = goodsDao.findGoodIdIsIn(keygwc);
+				for (int i = 0; i < gwc.size(); i++) {
+					for (int j = 0; j < list.size(); j++) {
+						if (list.get(j).getId() == keygwc[i]) {
+							list.get(j).setTuangoucount(valuegwc[i]);
+							beanGWC.add(list.get(j));
 						}
 					}
 				}

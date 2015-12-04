@@ -24,7 +24,7 @@ href="/favicon.ico"><LINK rel=Bookmark
 href="http://www.lashou.com/favicon.ico"><LINK title=RSS rel=alternate 
 type=application/rss+xml href="http://www.lashou.com/rss.php?cityid=2422">
 <SCRIPT type=text/javascript>
-document.domain="lashou.com";
+//document.domain="lashou.com";
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-15429888-1']);
 _gaq.push(['_addOrganic', 'baidu', 'word']);
@@ -204,7 +204,7 @@ style="Z-INDEX: 10; POSITION: absolute; WIDTH: 20px; BACKGROUND-POSITION: -53px 
 class=fpng></DIV><A href="http://cp.lashou.com/" target=_blank>彩票</A> 
 </STRONG></DIV>
 <DIV class="nav-login r"><SPAN class=nav-name 
-title=rz.sino272789>rz.sino272789</SPAN> <SPAN class=nav-x><A 
+title=${name }>欢迎${name }</SPAN> <SPAN class=nav-x><A 
 href="http://guangzhou.lashou.com/grade.php" target=_blank><IMG alt="" 
 src="showGwc_files/ico_jbb.gif" width=16 height=16></A> </SPAN><SPAN id=n_ml 
 class=nav-my><A class=sub 
@@ -244,7 +244,15 @@ var goods = {
 	'cycle_time':0,
 	'cycle_amount':0}
 </SCRIPT>
-
+<script type="text/javascript">
+$(function(){
+	var count=0;
+	$.each($('.goodcount'),function(i,v){
+		count=Number(count)+ Number($(this).text());
+		$('.lc_redzi').text("¥"+count);
+	});
+});
+</script>
 <SCRIPT type=text/javascript src="showGwc_files/buy0428-32.js"></SCRIPT>
 <!--content start:-->
 <DIV class=content>
@@ -271,13 +279,13 @@ action=buy2.php?act=buy><INPUT id=ch type=hidden name=ch> <!--content main-l-->
     <TD class=lc_padd><A href="http://guangzhou.lashou.com/deal/895973.html" 
       target=_blank>${showgwc.name }</A> </TD>
     <TD>&nbsp;</TD>
-    <TD align=middle><INPUT id=order_amount class=lc_wbkuang value='${showgwc.tuangoucount}' 
+    <TD align=middle><INPUT id=order_amount class=lc_wbkuang disabled="true" value='${showgwc.tuangoucount}' 
       name=amount autocomplete="off"> </TD>
     <TD style="FONT-FAMILY: Tahoma" class=lc_fontz align=middle>×</TD>
     <TD style="FONT-FAMILY: Arial" class=lc_fontz0 align=middle>¥<SPAN 
       id=price>${showgwc.tuangouprice }</SPAN></TD>
     <TD class=lc_fontz align=middle>=</TD>
-    <TD style="FONT-FAMILY: Arial" class=lc_fontz0 align=middle>¥ <SPAN 
+    <TD style="FONT-FAMILY: Arial" class=lc_fontz0 align=middle>¥ <SPAN  class=goodcount
       id=total_money_no_cf><fmt:formatNumber value="${showgwc.tuangouprice*showgwc.tuangoucount }" pattern="0.00"/></SPAN> 
       </TD></TR>
       </c:forEach>
@@ -288,7 +296,7 @@ action=buy2.php?act=buy><INPUT id=ch type=hidden name=ch> <!--content main-l-->
       class=lc_redzi>¥<fmt:formatNumber value="${showgwc.tuangouprice*showgwc.tuangoucount}" pattern="0.00"/></SPAN> </TD></TR></TBODY></TABLE>
 <DIV class=lc_phone>
 <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%">
-  <TBODY>
+  <!-- <TBODY>
   <TR>
     <TD class=lc_dbt height=28>您的手机</TD></TR>
   <TR>
@@ -301,7 +309,7 @@ action=buy2.php?act=buy><INPUT id=ch type=hidden name=ch> <!--content main-l-->
   <TR>
     <TD height=20><SPAN style="COLOR: #666; FONT-SIZE: 12px" class=zi14>· 换号了？ 
       <A id=auth_bindmobile_link href="javascript:void(0)">绑定新手机号»</A> 
-  </SPAN></TD></TR></TBODY></TABLE></DIV>
+  </SPAN></TD></TR></TBODY> --></TABLE></DIV>
 <SCRIPT type=text/javascript> 
 					function show(){$("#zx").css("display", "none");$(".yzm").css("display", "block");}
 				</SCRIPT>

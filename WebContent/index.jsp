@@ -25,11 +25,33 @@
 <link rel="apple-touch-icon-precomposed" sizes="114x114"
 	href="http://d2.lashouimg.com/static/pics/www/touch-icon-iphone4.png" />
 <LINK rel=stylesheet type=text/css href="css/index.css">
+<SCRIPT type=text/javascript src="showOne_files/jquery-1.3.2.min.js"></SCRIPT>
 <c:if test="${books==null and param.lk==null}">
 	<jsp:forward page="goods.do?lk=1000" />
 </c:if>
 <script src="http://s2.lashouimg.com/js/lab.min.js"
 	type="text/javascript"></script>
+<style >
+.button-red, .button-cart, .button-gray {
+display: inline-block;
+width: 101px;
+height: 44px;
+line-height: 44px;
+letter-spacing: 1px;
+text-align: center;
+float: left;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 22px;
+}
+.button-red {
+background-color: #FF7E00;
+color: #FFF;
+font-size: 18px;
+margin-right: 15px;
+box-shadow: 0 1px 0 #EB5E00;
+}
+</style>
 <script type="text/javascript">
 	var src = ('https:' == document.location.protocol ? 'https://ssl'
 			: 'http://www')
@@ -252,7 +274,15 @@
 				-->
 					<h2 class="pro-tit">
 						<a href="#" target="_blank" class="short_title">${good.name}
-						</a>
+						</a><a class="button-red" 
+												<c:choose>  
+												   <c:when test="${name!=null}">
+												   		href="javascript:clickadd('${good.id}')"	     
+												   </c:when>  
+												   <c:otherwise>  
+												   		href="login.jsp"  
+												   </c:otherwise>  
+												 </c:choose>>立即购买</a>
 						<div class="adre_widtd" style="display: none;">
 							<p>
 								${good.details}
@@ -279,7 +309,33 @@
 			<td><a href="goods.do?currpage=${last}&pageSize=${last}&typeid=${typeid }">末页</a></td>
 		</tr>
 	</table>
-
+<script type="text/javascript">
+$(function(){
+	/* $(".button-red").click(function(){
+		$.ajax({
+			url:'goods~addGWC.do?gid=${goods.id}',
+			success:function(){
+				//$('.cm-success').html('<SPAN class=c_cion></SPAN>团购已成功，可继续购买');
+				alert("添加购物车成功!!!");
+			}
+		});
+	}); */
+	
+});
+function clickadd(id){
+	$.ajax({
+		url:'goods~addGWC.do?gid='+id,
+		success:function(data){
+			//$('.cm-success').html('<SPAN class=c_cion></SPAN>团购已成功，可继续购买');
+			if(data){
+				alert("添加购物车成功!!!");
+			}else{
+				alert("添加购物车失败!!!");
+			}
+		}
+	});
+}
+</script>
 
 	<!--footer start:-->
 	<div class="footer">
