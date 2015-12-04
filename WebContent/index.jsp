@@ -35,7 +35,7 @@
 .button-red, .button-cart, .button-gray {
 display: inline-block;
 width: 101px;
-height: 44px;
+height: 20px;
 line-height: 44px;
 letter-spacing: 1px;
 text-align: center;
@@ -171,9 +171,6 @@ box-shadow: 0 1px 0 #EB5E00;
 				<c:forEach items="${gtList}" var="goodstype">
 					<strong><a href="goods.do?typeid=${goodstype.id}">${goodstype.typename}</a></strong> 
 				</c:forEach>
-			
-			
-			
 				<!-- <strong><a href="http://www.lashou.com/mall/">团购商城</a></strong> <strong><a
 					href="http://beijing.lashou.com" class="cur">今日团购<span>(254)</span></a></strong>
 				<strong><a href="http://beijing.lashou.com/life_list/">乐怡家居<span>(344)</span></a></strong>

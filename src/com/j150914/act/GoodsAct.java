@@ -1,6 +1,7 @@
 package com.j150914.act;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -12,8 +13,10 @@ import javax.servlet.http.HttpServletResponse;
 import com.j150914.controller.IAction;
 import com.j150914.dao.GoodsDao;
 import com.j150914.dao.GoodsTypeDao;
+import com.j150914.dao.OrderDao;
 import com.j150914.pojo.Goods;
 import com.j150914.pojo.GoodsType;
+import com.j150914.pojo.Order;
 
 public class GoodsAct implements IAction {
 	private int currpage = 0;
@@ -24,6 +27,12 @@ public class GoodsAct implements IAction {
 	private GoodsTypeDao typeDao = new GoodsTypeDao();
 	private int typeid;
 
+	// 订单
+	private OrderDao orderDao = new OrderDao();
+	private Order order=new Order();
+	/**
+	 * 物品显示
+	 */
 	@Override
 	public String execute(HttpServletRequest request,
 			HttpServletResponse response) {
@@ -53,6 +62,13 @@ public class GoodsAct implements IAction {
 		return "index.jsp";
 	}
 
+	/**
+	 * 显示一件物品
+	 * 
+	 * @param request
+	 * @param response
+	 * @return
+	 */
 	public String showOne(HttpServletRequest request,
 			HttpServletResponse response) {
 		goods = (Goods) goodsDao.findById(gid);
@@ -60,6 +76,13 @@ public class GoodsAct implements IAction {
 		return "showOne.jsp";
 	}
 
+	/**
+	 * 添加购物车
+	 * 
+	 * @param request
+	 * @param response
+	 * @return
+	 */
 	@SuppressWarnings("unchecked")
 	public String addGWC(HttpServletRequest request,
 			HttpServletResponse response) {
@@ -91,6 +114,13 @@ public class GoodsAct implements IAction {
 		}
 	}
 
+	/**
+	 * 去购物车
+	 * 
+	 * @param request
+	 * @param response
+	 * @return
+	 */
 	@SuppressWarnings({ "unchecked" })
 	public String goGWC(HttpServletRequest request, HttpServletResponse response) {
 		if (request.getSession().getAttribute("gwc") != null) {
@@ -120,6 +150,21 @@ public class GoodsAct implements IAction {
 			}
 		}
 
+		return "showGwc.jsp";
+	}
+
+	/**
+	 * 下订单
+	 * 
+	 * @param request
+	 * @param response
+	 * @return
+	 */
+	public String addOrder(HttpServletRequest request,
+			HttpServletResponse response) {
+		order.setTime(new Date());
+		orderDao.Insert(order);
+		goodsDao.Update(goods);
 		return "showGwc.jsp";
 	}
 
