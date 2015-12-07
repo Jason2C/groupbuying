@@ -37,6 +37,7 @@ public class LoginAct implements IAction {
 				Users userf = usersDao.findOne(users.getUsername());
 				if (users.getUserpwd().equals(userf.getUserpwd())) {
 					HttpSession session = request.getSession();
+					session.setAttribute("user", userf);
 					session.setAttribute("name", users.getUsername());
 					session.setAttribute("pw", users.getUserpwd());
 					session.setAttribute("gwc", null);

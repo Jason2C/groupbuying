@@ -26,6 +26,8 @@
 	href="http://d2.lashouimg.com/static/pics/www/touch-icon-iphone4.png" />
 <LINK rel=stylesheet type=text/css href="css/index.css">
 <SCRIPT type=text/javascript src="showOne_files/jquery-1.3.2.min.js"></SCRIPT>
+<SCRIPT type=text/javascript src="js/baseindex-11-min.js"></SCRIPT>
+<SCRIPT type=text/javascript src="js/jquery.autocomplete-01-min.js"></SCRIPT>
 <c:if test="${books==null and param.lk==null}">
 	<jsp:forward page="goods.do?lk=1000" />
 </c:if>
@@ -52,72 +54,6 @@ margin-right: 15px;
 box-shadow: 0 1px 0 #EB5E00;
 }
 </style>
-<script type="text/javascript">
-	var src = ('https:' == document.location.protocol ? 'https://ssl'
-			: 'http://www')
-			+ '.google-analytics.com/ga.js';
-	$LAB
-			.script("http://d1.lashouimg.com/js/jquery-1.3.2.min.js")
-			.wait()
-			.script("http://d2.lashouimg.com/js/jquery.autocomplete-01-min.js")
-			.wait()
-			.script("http://s1.lashouimg.com/js/baseindex-11-min.js")
-			.wait(
-					function() {
-						var youhui_temp = 0;
-						if (youhui_temp) {
-							$
-									.MsgBox({
-										title : '',
-										html : '',
-										hidden : false,
-										page : 'index',
-										str : '<div id="floatbox-overlay"></div><div id="floatbox" class="wabao" style="height:370px;width:500px;background-color:transparent;border:none;"><div class="indexWa" onclick="hide_wabao()"></div><div class="gotoWa" onclick="gotoGet()"></div></div>'
-									});
-							$(".close_float,#floatbox-overlay").click(
-									function() {
-										try {
-											$('#floatbox').remove();
-											$('#floatbox-overlay').remove();
-											$('embed, object, select').css({
-												'visibility' : 'visible'
-											});
-											return false;
-										} catch (e) {
-										}
-									});
-							setTimeout(function() {
-								try {
-									close_msg_box();
-									$.cookie('wabao', 1, {
-										expires : 0.1,
-										path : '/',
-										domain : '.lashou.com',
-										secure : false
-									});
-								} catch (e) {
-								}
-							}, 12000);
-						}
-					}).script(src).wait(function() {
-				document.domain = "lashou.com";
-				var _gaq = _gaq || [];
-				_gaq.push([ '_setAccount', 'UA-15429888-1' ]);
-				_gaq.push([ '_addOrganic', 'baidu', 'word' ]);
-				_gaq.push([ '_addOrganic', 'soso', 'w' ]);
-				_gaq.push([ '_addOrganic', 'vnet', 'kw' ]);
-				_gaq.push([ '_addOrganic', 'sogou', 'query' ]);
-				_gaq.push([ '_addOrganic', 'youdao', 'q' ]);
-				_gaq.push([ '_addIgnoredOrganic', 'lashou.com' ]);
-				_gaq.push([ '_addIgnoredOrganic', 'www.lashou.com' ]);
-				_gaq.push([ '_addIgnoredOrganic', 'lashou' ]);
-				_gaq.push([ '_addIgnoredOrganic', '拉手网' ]);
-				_gaq.push([ '_addIgnoredOrganic', '拉手' ]);
-				_gaq.push([ '_setDomainName', ".lashou.com" ]);
-				_gaq.push([ '_setAllowHash', false ]);
-				_gaq.push([ '_trackPageview' ]);
-			});
-</script>
 </head>
 <body>
 	<!--header start:-->
@@ -128,40 +64,8 @@ box-shadow: 0 1px 0 #EB5E00;
 				src="imgs/logo-new03.png" width='152' height='83'></a>
 		</div>
 		<ul class='city l'>
-			<li class="more"><div>
-					<a href="http://www.lashou.com/changecity" class="nsbg"><b>广州</b>切换城市<span
-						class="nsbg"></span></a>
-				</div></li>
 			<li>IT实训专家</li>
 		</ul>
-		<div class="n-rss r">
-			<!--关注我们-->
-			<div class="weibo nsbg r">
-
-				<div class="wb-list r">
-					<span id="tr_help" class="nav-my"> <a class="sub"
-						href="http://www.lashou.com/learn.php" rel="nofollow,noindex"><b>帮助</b><em></em></a>
-						<ul class="wb-h-list" style="display: none;">
-							<li><a href="http://www.lashou.com/learn.php" rel="nofollow">如何团购</a></li>
-							<li><a href="http://www.lashou.com/dayi/beijing"
-								rel="nofollow">我要说两句</a></li>
-							<li><a href="http://www.lashou.com/faq.php" rel="nofollow">常见问题</a></li>
-							<li><a href="http://www.lashou.com/xieyi.php" rel="nofollow">用户协议</a></li>
-						</ul>
-					</span>
-				</div>
-			</div>
-			<div class="e-sms nsbg c r">
-				<form action="/search.php" method="get" id="searchform"
-					onsubmit="javacript:return checksubmit()">
-					<input type="text" class="e-sms-l l" id="headersearchform"
-						name="sw" value="商品、商家、商圈" style="color: #999999" title="商品、商家、商圈"
-						autocomplete='off' /> <input type="hidden" name="cityid"
-						value="2419" /> <input type="submit" class="e-sms-r l"
-						id="searchsubmit" value="">
-				</form>
-			</div>
-		</div>
 	</div>
 	<!--nav start:-->
 	<div class="lsnav">
@@ -258,7 +162,7 @@ box-shadow: 0 1px 0 #EB5E00;
 					<div class="con-pre">
 						<a class="con-but" href="<c:choose>  
 												   <c:when test="${name!=null}">
-												   			goods~showOne.do?gid${good.id}       
+												   			goods~showOne.do?gid=${good.id}       
 												   </c:when>  
 												   <c:otherwise>  
 												   		login.jsp  
@@ -303,22 +207,10 @@ box-shadow: 0 1px 0 #EB5E00;
 			<td><c:if test="${currpage<last-1}">
 					<a href="goods.do?currpage=${currpage+1}&pageSize=${pageSize}&typeid=${typeid }">下一页</a>&nbsp;&nbsp;
 	</c:if></td>
-			<td><a href="goods.do?currpage=${last}&pageSize=${last}&typeid=${typeid }">末页</a></td>
+			<td><a href="goods.do?currpage=${last-1}&pageSize=${pageSize}&typeid=${typeid }">末页</a></td>
 		</tr>
 	</table>
 <script type="text/javascript">
-$(function(){
-	/* $(".button-red").click(function(){
-		$.ajax({
-			url:'goods~addGWC.do?gid=${goods.id}',
-			success:function(){
-				//$('.cm-success').html('<SPAN class=c_cion></SPAN>团购已成功，可继续购买');
-				alert("添加购物车成功!!!");
-			}
-		});
-	}); */
-	
-});
 function clickadd(id){
 	$.ajax({
 		url:'goods~addGWC.do?gid='+id,
@@ -334,116 +226,7 @@ function clickadd(id){
 }
 </script>
 
-	<!--footer start:-->
-	<div class="footer">
-		<div class="g_footer c"></div>
-		<div class="footer-inside">
-			<dl class="aboutls" style="padding-left: 15px;">
-				<dt>
-					<strong class="f_beginner">用户帮助</strong>
-				</dt>
-				<dd>
-					<a href="http://www.lashou.com/what.php" rel="nofollow"><i></i>拉手是什么</a>
-					<a href="http://www.lashou.com/faq.php" rel="nofollow"><i></i>常见问题</a>
-					<a href="http://www.lashou.com/faq.php?act=zhifu" rel="nofollow"><i></i>支付方式</a>
-					<a href="http://www.lashou.com/setemails.php?type=163"
-						rel="nofollow"><i></i>邮箱白名单设置</a> <a
-						href="http://www.lashou.com/feedback.php" rel="nofollow"><i></i>意见反馈</a>
-					<a target="_blank"
-						href="http://www.lashou.com/event/lottery_form.php" rel="nofollow"><i></i>往期抽奖公布</a>
-					<a target="_blank" href="/hot_deals/beijing"><i></i>往期团购</a>
-				</dd>
-			</dl>
-			<dl class="aboutls">
-				<dt>
-					<strong class="f_updates">获取更新</strong>
-				</dt>
-				<dd>
-					<a href="http://www.lashou.com/subscribe.php" rel="nofollow"><i></i>邮件订阅</a>
-					<a target="_blank" href="http://www.lashou.com/rss.php?cityid=2419"
-						rel="nofollow"><i></i>RSS订阅</a> <a target="_blank"
-						href="http://t.sina.com.cn/lasho" rel="nofollow"><i></i>拉手新浪微博</a>
-					<a target="_blank" href="http://www.douban.com/group/lashou/"
-						rel="nofollow"><i></i>拉手豆瓣小组</a>
-				</dd>
-			</dl>
-			<dl class="aboutls">
-				<dt>
-					<strong class="f_businesses">商务合作</strong>
-				</dt>
-				<dd>
-					<a target="_blank"
-						href="http://www.lashou.com/stores/commit.php?act=sp"
-						rel="nofollow"><i></i>提供团购信息</a> <a
-						href="http://www.lashou.com/open.php?page=api" rel="nofollow"><i></i>团购开放API</a>
-					<a href="http://www.lashou.com/setwidget.php"
-						rel="nofollow,noindex"><i></i>团购挂件</a> <a
-						href="http://www.lashou.com/need/ad/hezuo.php"><i></i>合作伙伴</a> <a
-						href="http://union.lashou.com" target="_blank"><i></i>拉手网联盟</a>
-				</dd>
-			</dl>
-			<dl class="aboutls">
-				<dt>
-					<strong class="f_company">公司信息</strong>
-				</dt>
-				<dd>
-					<a href="http://www.lashou.com/about.php" rel="nofollow"><i></i>关于拉手</a>
-					<a href="http://www.lashou.com/about.php?act=press" rel="nofollow"><i></i>媒体报道</a>
-					<a href="http://www.lashou.com/job.php" rel="nofollow"><i></i>加入我们</a>
-					<a href="http://www.lashou.com/contact.php" rel="nofollow"><i></i>联系我们</a>
-					<a href="http://www.lashou.com/rule.php" rel="nofollow"><i></i>隐私条款</a>
-					<a href="http://www.lashou.com/xieyi.php" rel="nofollow"><i></i>用户协议</a>
-					<a href="http://www.lashou.com/faq.php?act=promise" rel="nofollow"><i></i>团购三包</a>
-				</dd>
-			</dl>
-			<dl class="aboutls">
-				<dt>
-					<strong class="f_software">手机软件</strong>
-				</dt>
-				<dd>
-					<a href="http://mobile.lashou.com/client_buy.html" target="_blank"><i></i>拉手团购</a>
-					<a href="http://mobile.lashou.com/client_hotel.html"
-						target="_blank" rel="nofollow"><i></i>拉手酒店预订</a> <a
-						href="http://mobile.lashou.com/client_caipiao.html"
-						target="_blank" rel="nofollow"><i></i>拉手彩票</a>
-					<!--<a href="http://mobile.lashou.com/conversion.html" target="_blank" rel="nofollow"><i></i>拉手万能转换</a>-->
-				</dd>
-			</dl>
-			<!--logo-->
-			<div class="footlogo l">
-				<a href="http://www.lashou.com" title="拉手网全国统一客服电话4000-517-317"
-					style="text-indent: -999em; z-index: 2; overflow: hidden"
-					rel="nofollow">拉手网</a><span></span>
-			</div>
-			<div class="copyright c">
-				<div style="padding-top: 25px; overflow: hidden;">
-					<a href="http://www.lashou.com/need/ad/chengxin.php"
-						target="_blank" rel="nofollow" class="renz1"></a> <a
-						target="_blank"
-						href="http://www.lashou.com/need/ad/chengxin.php#renzheng"
-						rel="nofollow" class="renz2"></a> <a target="_blank"
-						href="http://www.lashou.com/need/ad/chengxin.php#zfb"
-						rel="nofollow" class="renz3"></a> <a target="_blank"
-						href="http://www.lashou.com/need/ad/chengxin.php#cft"
-						rel="nofollow" class="renz4"></a>
-					<!--可信网站-->
-					<a target="_blank"
-						href="http://www.lashou.com/need/ad/chengxin.php#kxl"
-						rel="nofollow" class="renz5"></a> <span class="renz6"></span> <span
-						class="renz7"></span>
-				</div>
-				<div style="padding-top: 15px;">&copy; 2012 北京拉手网络技术有限公司
-					LaShou.com 京ICP证100571号 京ICP备11004895号 京公网安备110105001181号</div>
-			</div>
-		</div>
-	</div>
-	<!--footer end:-->
-	<div class="indexuptop" id="go_lstop" style="display: none;">
-		<a class="like"></a><a href="http://www.lashou.com/feedback.php"
-			target="_blank" rel="nofollow"></a><a class="last"></a>
-	</div>
-	<!-- load js start-->
-	<!--[if IE 6]>
+<!--[if IE 6]>
 <SCRIPT src="http://s1.lashouimg.com/templates/default/images/iepng.js"></SCRIPT>
 <SCRIPT>
 DD_belatedPNG.fix('.bq_discount,.news_small,.footlogo span,.n_news,li.eb a,li.eb,.cont-share,.c_cion,.proicon,.cm-over img,.detail-mid h4 span,.c-buy-num img,.hs_cion,.hscon-mid,.hs_pic,.mini-pro-buy,.mini-time,.m-buy-btn002,.m-buy-btn-1,.fpng,.n_hots,.weibo,.wb-tit,.n-rss,.nform,.con-item dt,.con-item1,.indexuptop');

@@ -2,7 +2,7 @@ package com.j150914.pojo;
 
 import java.util.Date;
 
-public class Order {
+public class Orders {
 	private int id;
 	private String orderid;
 	private int userid;

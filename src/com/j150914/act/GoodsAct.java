@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,11 +14,14 @@ import javax.servlet.http.HttpServletResponse;
 import com.j150914.controller.IAction;
 import com.j150914.dao.GoodsDao;
 import com.j150914.dao.GoodsTypeDao;
-import com.j150914.dao.OrderDao;
+import com.j150914.dao.OrdersDao;
+import com.j150914.dao.UsersDao;
 import com.j150914.pojo.Goods;
 import com.j150914.pojo.GoodsType;
-import com.j150914.pojo.Order;
+import com.j150914.pojo.Orders;
+import com.j150914.pojo.Users;
 
+@SuppressWarnings("all")
 public class GoodsAct implements IAction {
 	private int currpage = 0;
 	private int pageSize = 15;
@@ -28,8 +32,11 @@ public class GoodsAct implements IAction {
 	private int typeid;
 
 	// 订单
-	private OrderDao orderDao = new OrderDao();
-	private Order order=new Order();
+	private OrdersDao orderDao = new OrdersDao();
+	private Orders order = new Orders();
+	private double allCount;
+	private UsersDao usersDao = new UsersDao();
+
 	/**
 	 * 物品显示
 	 */
@@ -162,10 +169,34 @@ public class GoodsAct implements IAction {
 	 */
 	public String addOrder(HttpServletRequest request,
 			HttpServletResponse response) {
+		// 设置订单时间
 		order.setTime(new Date());
+		// 取得购物车
+ 		List<Goods> gwcList = (List<Goods>) request.getSession().getAttribute(
+				"showGwc");
+ 		Users user = (Users) request.getSession().getAttribute("user");
+		// 设置物品已售件数
+ 		for (Goods goods : gwcList) {
+			int gwcc = goods.getTuangoucount();
+			int gsold = goods.getSold();
+			goods.setSold(gsold+gwcc);
+			goodsDao.Update(goods);
+		}
+		// 更新用户余额
+		double acount = user.getAcount() - allCount;
+		user.setAcount(acount);
+		usersDao.Update(user);
+
+		// 添加一条历史订单
+		order.setOrderid(UUID.randomUUID()+"");
+		order.setUserid(user.getId());
+		order.setTotal(allCount);
+		order.setStatus(1);
 		orderDao.Insert(order);
-		goodsDao.Update(goods);
-		return "showGwc.jsp";
+		// 5 清空购物车的信息
+		request.getSession().removeAttribute("showGwc");
+		// 订单的默认状态为未派送， 操作成功后提示“交易成功！”，并转发回首页。
+		return "goods.do";
 	}
 
 	public int getCurrpage() {
@@ -207,4 +238,13 @@ public class GoodsAct implements IAction {
 	public void setTypeid(int typeid) {
 		this.typeid = typeid;
 	}
+
+	public double getAllCount() {
+		return allCount;
+	}
+
+	public void setAllCount(double allCount) {
+		this.allCount = allCount;
+	}
+
 }
