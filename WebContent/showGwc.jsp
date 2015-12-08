@@ -17,16 +17,12 @@
 <LINK rel=Bookmark href="http://www.lashou.com/favicon.ico">
 <LINK title=RSS rel=alternate 
 type=application/rss+xml href="http://www.lashou.com/rss.php?cityid=2422">
-<LINK rel=stylesheet type=text/css href="showGwc_files/base80.css"><LINK 
-rel=stylesheet type=text/css href="showGwc_files/myls29.css">
+<LINK rel=stylesheet type=text/css href="css/index.css">
 <SCRIPT type=text/javascript src="showGwc_files/jquery-1.3.2.min.js"></SCRIPT>
-
-<!-- <SCRIPT type=text/javascript 
-src="showGwc_files/jquery.autocomplete-02-min.js"></SCRIPT> -->
-
-<!-- <SCRIPT type=text/javascript src="showGwc_files/base0428-59-min.js"></SCRIPT> -->
-
-<!-- <SCRIPT src="showGwc_files/tb-slider03-min.js"></SCRIPT> -->
+ 
+<SCRIPT type=text/javascript src="showGwc_files/jquery.autocomplete-02-min.js"></SCRIPT>
+<SCRIPT type=text/javascript src="showGwc_files/base0428-59-min.js"></SCRIPT>
+<SCRIPT src="showGwc_files/tb-slider03-min.js"></SCRIPT>
 
 
 <STYLE>#TB_overlay {
@@ -76,7 +72,8 @@ DD_belatedPNG.fix('.bq_discount,.news_small,.footlogo span,.n_news,li.eb a,li.eb
 </SCRIPT>
 <![endif]-->
 <META name=GENERATOR content="MSHTML 8.00.7601.17824"></HEAD>
-<BODY><!--header start:-->
+<BODY>
+<!--header start:-->
 <DIV 
 style="BACKGROUND: url(http://d2.lashouimg.com/static/pics/www/header_bangy005.jpg) no-repeat" 
 class=header>
@@ -85,8 +82,25 @@ src="showGwc_files/logo-new03.png" width=152 height=83></A></DIV>
 <UL class="city l">
   <LI class=more>
   <LI>已开通城市500+ </LI></UL>
+ 
 </DIV>
 
+<div class="lsnav">
+	<div class="nav-inside">
+	<div class="nav-login r">
+		<c:choose>
+			<c:when test="${name!=null}">
+				<jsp:include page="user.jsp" />
+					   		欢迎${name}<a href="login.do">退出</a>
+			</c:when>
+			<c:otherwise>
+				<span><a href="login.jsp">登录</a></span>
+				<span><a href="regist.jsp">注册</a></span>
+			</c:otherwise>
+		</c:choose>
+	</div>
+	</div>
+</div>
 <STYLE type=text/css>@import url( http://d1.lashouimg.com/templates/default/images/img_buy/liuch110910.css );
 </STYLE>
 <script type="text/javascript">

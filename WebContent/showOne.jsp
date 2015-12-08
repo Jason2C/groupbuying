@@ -17,13 +17,10 @@
 <LINK rel=stylesheet type=text/css href="showOne_files/base79.css">
 <LINK rel=stylesheet type=text/css href="showOne_files/lashou57.css">
 <SCRIPT type=text/javascript src="showOne_files/jquery-1.3.2.min.js"></SCRIPT>
-
-<SCRIPT type=text/javascript 
-src="showOne_files/jquery.autocomplete-02-min.js"></SCRIPT>
-
-<!-- <SCRIPT type=text/javascript src="showOne_files/base0428-59-min.js"></SCRIPT> -->
-
+<SCRIPT type=text/javascript src="showOne_files/jquery.autocomplete-02-min.js"></SCRIPT>
+<SCRIPT type=text/javascript src="showOne_files/base0428-59-min.js"></SCRIPT>
 <SCRIPT src="showOne_files/tb-slider03-min.js"></SCRIPT>
+<LINK rel=stylesheet type=text/css href="css/index.css">
 
 <!--[if IE 6]>
 <SCRIPT src="http://s1.lashouimg.com/templates/default//images/iepng.js"></SCRIPT>
@@ -42,6 +39,22 @@ src="showOne_files/logo-new03.png" width=152 height=83></A></DIV>
   <LI class=more>
   <LI>已开通城市500+ </LI></UL>
 </DIV>
+<div class="lsnav">
+	<div class="nav-inside">
+	<div class="nav-login r">
+		<c:choose>
+			<c:when test="${name!=null}">
+				<jsp:include page="user.jsp" />
+					   		欢迎${name}<a href="login.do">退出</a>
+			</c:when>
+			<c:otherwise>
+				<span><a href="login.jsp">登录</a></span>
+				<span><a href="regist.jsp">注册</a></span>
+			</c:otherwise>
+		</c:choose>
+	</div>
+	</div>
+</div>
 <STYLE>
 #like-button {
 	POSITION: absolute; TEXT-INDENT: -9999px; MARGIN: 45px 0px 0px 950px; WIDTH: 24px; DISPLAY: block; BACKGROUND: url(http://img.test.lashou.com/static/templates/default/images/like_icon.png) 0px -100px; HEIGHT: 71px; OVERFLOW: hidden; CURSOR: pointer

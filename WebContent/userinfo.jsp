@@ -12,16 +12,14 @@
 <META content="text/html; charset=utf-8" http-equiv=Content-Type>
 <META content=IE=7 http-equiv=x-ua-compatible>
 <LINK rel="shortcut icon" href="/favicon.ico">
-<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
-<LINK rel=stylesheet type=text/css href="regist_files/base80.css">
 <LINK rel=stylesheet type=text/css href="regist_files/myls29.css">
+<LINK rel=stylesheet type=text/css href="css/index.css">
 <SCRIPT type=text/javascript src="regist_files/jquery-1.3.2.min.js"></SCRIPT>
-
-<SCRIPT type=text/javascript src="regist_files/jquery.autocomplete-02-min.js"></SCRIPT>
 <SCRIPT type=text/javascript src="js/jquery.validate.js"></SCRIPT>
-<SCRIPT type=text/javascript src="regist_files/base0428-59-min.js"></SCRIPT>
+<SCRIPT type=text/javascript src="showGwc_files/jquery.autocomplete-02-min.js"></SCRIPT>
+<SCRIPT type=text/javascript src="showGwc_files/base0428-59-min.js"></SCRIPT>
+<SCRIPT src="showGwc_files/tb-slider03-min.js"></SCRIPT>
 
-<SCRIPT src="regist_files/tb-slider03-min.js"></SCRIPT>
 
 
 <STYLE>#TB_overlay {
@@ -81,6 +79,22 @@ src="regist_files/logo-new03.png" width=152 height=83></A></DIV>
   <LI class=more>
   <LI>已开通城市500+ </LI></UL>
 </DIV>
+<div class="lsnav">
+	<div class="nav-inside">
+	<div class="nav-login r">
+		<c:choose>
+			<c:when test="${name!=null}">
+				<jsp:include page="user.jsp" />
+					   		欢迎${name}<a href="login.do">退出</a>
+			</c:when>
+			<c:otherwise>
+				<span><a href="login.jsp">登录</a></span>
+				<span><a href="regist.jsp">注册</a></span>
+			</c:otherwise>
+		</c:choose>
+	</div>
+	</div>
+</div>
 <STYLE>.reg_ok {
 	LINE-HEIGHT: 28px; PADDING-LEFT: 25px; DISPLAY: inline-block; BACKGROUND: url(http://s2.lashouimg.com/static/pics/myls/icons-signup.png) no-repeat; HEIGHT: 28px
 }
@@ -201,34 +215,34 @@ src="regist_files/logo-new03.png" width=152 height=83></A></DIV>
   <A href="http://www.lashou.com/regn.php#">校园用户</A> </LI> --></UL></DIV>
   
   
-<FORM id=reg method=post action=regist.do>
+<FORM id=reg method=post action=user.do>
 <TABLE id=tbc_01 class=dis border=0 cellSpacing=0 cellPadding=0 width="100%" 
 align=center>
   <TBODY>
   <TR>
     <TD style="FONT-SIZE: 14px" height=40 align=right>邮箱：</TD>
     <TD width="75%">
-    <INPUT id=email class=kuangaa_login maxLength=200 size=28 name=users.email><span></span> </TD></TR>
+    <INPUT id=email class=kuangaa_login maxLength=200 size=28 name=users.email value="${user.email}"><span></span> </TD></TR>
     <TR>
     <TD style="FONT-SIZE: 14px" height=40 align=right>真是姓名：</TD>
     <TD width="75%">
-    <INPUT id=email class=kuangaa_login maxLength=200 size=28 name=users.email><span></span> </TD></TR>
+    <INPUT id=email class=kuangaa_login maxLength=200 size=28 name=users.email value="${user.realname}"><span></span> </TD></TR>
     <TR>
     <TD style="FONT-SIZE: 14px" height=40 align=right>性别：</TD>
     <TD width="75%">
-    <INPUT id=email class=kuangaa_login maxLength=200 size=28 name=users.email><span></span> </TD></TR>
+    <INPUT id=email class=kuangaa_login maxLength=200 size=28 name=users.email value="${user.sex}"><span></span> </TD></TR>
     <TR>
     <TD style="FONT-SIZE: 14px" height=40 align=right>电话：</TD>
     <TD width="75%">
-    <INPUT id=email class=kuangaa_login maxLength=200 size=28 name=users.email><span></span> </TD></TR>
-    <TR>
-    <TD style="FONT-SIZE: 14px" height=40 align=right>地址：</TD>
-    <TD width="75%">
-    <INPUT id=email class=kuangaa_login maxLength=200 size=28 name=users.email><span></span> </TD></TR>
-    <TR>
-    <TD style="FONT-SIZE: 14px" height=40 align=right>qq：</TD>
-    <TD width="75%">
-    <INPUT id=email class=kuangaa_login maxLength=200 size=28 name=users.email><span></span> </TD></TR>
+    <INPUT id=email class=kuangaa_login maxLength=200 size=28 name=users.email value="${user.phone}"><span></span> </TD></TR>
+    <TR>                                                                        
+    <TD style="FONT-SIZE: 14px" height=40 align=right>地址：</TD>                  
+    <TD width="75%">                                                            
+    <INPUT id=email class=kuangaa_login maxLength=200 size=28 name=users.email value="${user.address}"><span></span> </TD></TR>
+    <TR>                                                                        
+    <TD style="FONT-SIZE: 14px" height=40 align=right>qq：</TD>                  
+    <TD width="75%">                                                            
+    <INPUT id=email class=kuangaa_login maxLength=200 size=28 name=users.email value="${user.qq}"><span></span> </TD></TR>
   <TR>
     <TD style="FONT-SIZE: 14px" height=40 align=right>所在城市：</TD>
     <TD><SELECT id=cityid name=users.type> <OPTGROUP 
@@ -521,7 +535,7 @@ align=center>
           value=2271>诸暨</OPTION><OPTION value=2304>龙泉</OPTION><OPTION 
           value=2272>嵊州</OPTION><OPTION value=2258>海宁</OPTION></OPTGROUP><OPTION 
         value=0>其他</OPTION></SELECT> </TD></TR>
-  <TR>
+  <!-- <TR>
     <TD style="FONT-SIZE: 14px" height=40 align=right>验证码：</TD>
     <TD><INPUT style="WIDTH: 60px" class=kuangaa_login maxLength=4 size=4 name=validateNum>
       <IMG style="VERTICAL-ALIGN: middle" id=chkimg name=chkimg align=absMiddle src="validateImage.jsp" width=65 height=20> 
@@ -534,10 +548,10 @@ align=center>
 							document.getElementById('chkimg').src="validateImage.jsp?r=" + Math.random();
 						}
 					  </SCRIPT>
-       </TD></TR>
+       </TD></TR> -->
   <TR>
     <TD style="FONT-SIZE: 14px" height=45 align=right></TD>
-    <TD><INPUT class="gdbtn_bef agree_btn" value=注册 type=submit name=submited> 
+    <TD><INPUT class="gdbtn_bef agree_btn" value=确定修改 type=submit name=submited> 
     </TD></TR></TBODY></TABLE></FORM>
 </DIV></DIV>
 <DIV class="c_cion detail-bg-b"></DIV></DIV></DIV><!--content main-r-->

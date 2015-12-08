@@ -12,16 +12,13 @@
 <META content="text/html; charset=utf-8" http-equiv=Content-Type>
 <META content=IE=7 http-equiv=x-ua-compatible>
 <LINK rel="shortcut icon" href="/favicon.ico">
-<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
-<LINK rel=stylesheet type=text/css href="regist_files/base80.css">
 <LINK rel=stylesheet type=text/css href="regist_files/myls29.css">
+<LINK rel=stylesheet type=text/css href="css/index.css">
 <SCRIPT type=text/javascript src="regist_files/jquery-1.3.2.min.js"></SCRIPT>
-
-<SCRIPT type=text/javascript src="regist_files/jquery.autocomplete-02-min.js"></SCRIPT>
 <SCRIPT type=text/javascript src="js/jquery.validate.js"></SCRIPT>
-<SCRIPT type=text/javascript src="regist_files/base0428-59-min.js"></SCRIPT>
-
-<SCRIPT src="regist_files/tb-slider03-min.js"></SCRIPT>
+<SCRIPT type=text/javascript src="showGwc_files/jquery.autocomplete-02-min.js"></SCRIPT>
+<SCRIPT type=text/javascript src="showGwc_files/base0428-59-min.js"></SCRIPT>
+<SCRIPT src="showGwc_files/tb-slider03-min.js"></SCRIPT>
 
 
 <STYLE>#TB_overlay {
@@ -80,7 +77,24 @@ src="regist_files/logo-new03.png" width=152 height=83></A></DIV>
 <UL class="city l">
   <LI class=more>
   <LI>已开通城市500+ </LI></UL>
+  
 </DIV>
+<div class="lsnav">
+	<div class="nav-inside">
+	<div class="nav-login r">
+		<c:choose>
+			<c:when test="${name!=null}">
+				<jsp:include page="user.jsp" />
+					   		欢迎${name}<a href="login.do">退出</a>
+			</c:when>
+			<c:otherwise>
+				<span><a href="login.jsp">登录</a></span>
+				<span><a href="regist.jsp">注册</a></span>
+			</c:otherwise>
+		</c:choose>
+	</div>
+	</div>
+</div>
 <STYLE>.reg_ok {
 	LINE-HEIGHT: 28px; PADDING-LEFT: 25px; DISPLAY: inline-block; BACKGROUND: url(http://s2.lashouimg.com/static/pics/myls/icons-signup.png) no-repeat; HEIGHT: 28px
 }

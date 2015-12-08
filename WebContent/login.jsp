@@ -43,40 +43,18 @@ DD_belatedPNG.fix('.bq_discount,.news_small,.footlogo span,.n_news,li.eb a,li.eb
 <!--nav start:-->
 <div class="lsnav">
 	<div class="nav-inside">
-		 <div class="nav-login r">
-								
-                   <span id="n_ml" class="nav-my">
-						<a class="sub" href="http://www.lashou.com/mycode.php">我的拉手<em></em></a>
-						<ul class="n-h-list" style="display:none">
-							<li><a href="http://www.lashou.com/mycode.php">我的拉手券</a></li>
-							<li><a href="http://www.lashou.com/mygo.php">我的订单</a></li>
-							<li><a href="http://www.lashou.com/mycollection.php">我的收藏</a></li>
-							<li><a href="http://www.lashou.com/deliver_address.php">常用地址</a></li>
-							<li><a href="http://www.lashou.com/bills.php">拉手账本</a></li>
-							<li><a href="http://www.lashou.com/settings.php">账户设置</a></li>
-							<li><a href="http://www.lashou.com/message.php">我的消息</a></li>
-						</ul>
-					</span>
-					<span><a  class="cur" href="login.jsp">登录</a></span>
-					<span><a  href="regist.jsp">注册</a></span>
-
-		   <!--
-				  <span class="nav-name"></span>
-				  <span class="nav-x"></span>
-                   <span id="n_ml" class="nav-my">
-						<a class="sub" href="http://www.lashou.com/mycode.php">我的拉手<em></em></a>
-						<ul class="n-h-list" style="display:none">
-							<li><a href="http://www.lashou.com/mycode.php">我的拉手券</a></li>
-							<li><a href="http://www.lashou.com/mygo.php">我的订单</a></li>
-							<li><a href="http://www.lashou.com/mycollection.php">我的收藏</a></li>
-							<li><a href="http://www.lashou.com/settings.php">账户设置</a></li>
-							<li><a href="http://www.lashou.com/deliver_address.php">常用地址</a></li>
-							<li><a href="http://www.lashou.com/bills.php">拉手账本</a></li>
-							<li><a href="http://www.lashou.com/message.php">我的消息</a></li>
-						</ul>
-					</span>
-				<span><a href="http://www.lashou.com/logout.php">退出</a></span>
-		   -->				</div>
+	<div class="nav-login r">
+		<c:choose>
+			<c:when test="${name!=null}">
+				<jsp:include page="user.jsp" />
+					   		欢迎${name}<a href="login.do">退出</a>
+			</c:when>
+			<c:otherwise>
+				<span><a href="login.jsp">登录</a></span>
+				<span><a href="regist.jsp">注册</a></span>
+			</c:otherwise>
+		</c:choose>
+	</div>
 	</div>
 </div>
 <!--nav end-->
