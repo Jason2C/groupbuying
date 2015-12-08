@@ -172,14 +172,14 @@ public class GoodsAct implements IAction {
 		// 设置订单时间
 		order.setTime(new Date());
 		// 取得购物车
- 		List<Goods> gwcList = (List<Goods>) request.getSession().getAttribute(
+		List<Goods> gwcList = (List<Goods>) request.getSession().getAttribute(
 				"showGwc");
- 		Users user = (Users) request.getSession().getAttribute("user");
+		Users user = (Users) request.getSession().getAttribute("user");
 		// 设置物品已售件数
- 		for (Goods goods : gwcList) {
+		for (Goods goods : gwcList) {
 			int gwcc = goods.getTuangoucount();
 			int gsold = goods.getSold();
-			goods.setSold(gsold+gwcc);
+			goods.setSold(gsold + gwcc);
 			goodsDao.Update(goods);
 		}
 		// 更新用户余额
@@ -188,15 +188,16 @@ public class GoodsAct implements IAction {
 		usersDao.Update(user);
 
 		// 添加一条历史订单
-		order.setOrderid(UUID.randomUUID()+"");
+		order.setOrderid(new Date().getTime() + "");
 		order.setUserid(user.getId());
 		order.setTotal(allCount);
 		order.setStatus(1);
 		orderDao.Insert(order);
 		// 5 清空购物车的信息
 		request.getSession().removeAttribute("showGwc");
+		request.getSession().removeAttribute("gwc");
 		// 订单的默认状态为未派送， 操作成功后提示“交易成功！”，并转发回首页。
-		return "goods.do";
+		return "@red_index.jsp";
 	}
 
 	public int getCurrpage() {

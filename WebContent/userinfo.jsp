@@ -209,24 +209,26 @@ align=center>
     <TD style="FONT-SIZE: 14px" height=40 align=right>邮箱：</TD>
     <TD width="75%">
     <INPUT id=email class=kuangaa_login maxLength=200 size=28 name=users.email><span></span> </TD></TR>
-  <TR>
-    <TD style="FONT-SIZE: 14px" height=40 align=right>用户名：</TD>
-    <TD><INPUT id=user_name class=kuangaa_login maxLength=20 size=28 name=users.username><span></span></TD></TR>
-  <TR>
-    <TD style="FONT-SIZE: 14px" height=40 align=right>密码：</TD>
-    <TD><INPUT id=pwd class=kuangaa_login onkeyup=pwStrength(this.value) 
-      onpaste="return false;" maxLength=99 size=28 type=password name=users.userpwd><span></span></TD></TR>
-  <TR>
-    <TD></TD>
-    <TD class=grade-pwd>
-      <UL>
-        <LI>安全强度 </LI>
-        <LI class=cur><SPAN id=strength_L1></SPAN></LI>
-        <LI id=strength_H1></LI></UL></TD></TR>
-  <TR>
-    <TD style="FONT-SIZE: 14px" height=40 align=right>确认密码：</TD>
-    <TD><INPUT id=pwd2 class=kuangaa_login onpaste="return false;" 
-      maxLength=99 size=28 type=password name=confirmPassword><span></span></TD></TR>
+    <TR>
+    <TD style="FONT-SIZE: 14px" height=40 align=right>真是姓名：</TD>
+    <TD width="75%">
+    <INPUT id=email class=kuangaa_login maxLength=200 size=28 name=users.email><span></span> </TD></TR>
+    <TR>
+    <TD style="FONT-SIZE: 14px" height=40 align=right>性别：</TD>
+    <TD width="75%">
+    <INPUT id=email class=kuangaa_login maxLength=200 size=28 name=users.email><span></span> </TD></TR>
+    <TR>
+    <TD style="FONT-SIZE: 14px" height=40 align=right>电话：</TD>
+    <TD width="75%">
+    <INPUT id=email class=kuangaa_login maxLength=200 size=28 name=users.email><span></span> </TD></TR>
+    <TR>
+    <TD style="FONT-SIZE: 14px" height=40 align=right>地址：</TD>
+    <TD width="75%">
+    <INPUT id=email class=kuangaa_login maxLength=200 size=28 name=users.email><span></span> </TD></TR>
+    <TR>
+    <TD style="FONT-SIZE: 14px" height=40 align=right>qq：</TD>
+    <TD width="75%">
+    <INPUT id=email class=kuangaa_login maxLength=200 size=28 name=users.email><span></span> </TD></TR>
   <TR>
     <TD style="FONT-SIZE: 14px" height=40 align=right>所在城市：</TD>
     <TD><SELECT id=cityid name=users.type> <OPTGROUP 

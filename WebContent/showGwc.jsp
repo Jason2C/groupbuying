@@ -110,7 +110,6 @@ action=goods~addOrder.do><INPUT id=ch type=hidden name=ch> <!--content main-l-->
 <DIV class=detail-mid>
 <DIV class=gbt_line><IMG src="showGwc_files/tj_sanbu.gif"> </DIV>
 <DIV class=lc_out>
-${user }
 <TABLE class=lc_heatab border=0 cellSpacing=0 cellPadding=0 width="100%">
   <TBODY>
   <TR class=lc_hhbg>

@@ -35,7 +35,7 @@ DD_belatedPNG.fix('.bq_discount,.news_small,.footlogo span,.n_news,li.eb a,li.eb
 <body>
 <!--header start:-->
 <div class="header" style=" background:url(http://d2.lashouimg.com/static/pics/www/header_bangy005.jpg) no-repeat;">
-	<div class='logo l'><a  href="http://guangzhou.lashou.com"><img src="http://s1.lashouimg.com/static/pics/www/logo-new03.png" alt="拉手网团购" width='152' height='83'></a></div>
+	<div class='logo l'><a  href="goods.do"><img src="http://s1.lashouimg.com/static/pics/www/logo-new03.png" alt="拉手网团购" width='152' height='83'></a></div>
 	<ul class='city l'>
 		<li>已开通城市500+</li>
 	</ul>
